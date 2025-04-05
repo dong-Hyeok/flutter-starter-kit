@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:timf_match/design_system/style/match_badge_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_badge_styles.dart';
 
 /// [DefaultBadge]
 ///
@@ -31,7 +31,9 @@ class DefaultBadge extends StatelessWidget {
           color: backgroundColor,
           borderRadius: BorderRadius.circular(12.0),
         ),
-        padding: EdgeInsets.symmetric(horizontal: defaultBadgeStyle.paddingHorizontal),
+        padding: EdgeInsets.symmetric(
+          horizontal: defaultBadgeStyle.paddingHorizontal,
+        ),
         alignment: Alignment.center,
         child: Text(
           content,

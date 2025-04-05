@@ -2,10 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:timf_match/design_system/color/match_app_colors.dart';
-import 'package:timf_match/design_system/style/match_button_styles.dart';
-import 'package:timf_match/design_system/style/match_text_styles.dart';
-import 'package:timf_match/utils/snackbar_utils.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/toast_message.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
 
 /// [LinkMediumSecondaryButton]
 ///
@@ -69,8 +69,12 @@ class _LinkMediumSecondaryButtonState extends State<LinkMediumSecondaryButton> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: widget.widthOption == ButtonWidthOption.WRAP ? MainAxisSize.min : MainAxisSize.max,
-            children: widget.assetPosition == ButtonIconPosition.LEFT ? _buildLeftIconLayout() : _buildRightIconLayout(),
+            mainAxisSize:
+                widget.widthOption == ButtonWidthOption.WRAP ? MainAxisSize.min : MainAxisSize.max,
+            children:
+                widget.assetPosition == ButtonIconPosition.LEFT
+                    ? _buildLeftIconLayout()
+                    : _buildRightIconLayout(),
           ),
         ),
       ),
@@ -87,7 +91,10 @@ class _LinkMediumSecondaryButtonState extends State<LinkMediumSecondaryButton> {
       Text(
         widget.title,
         style: MatchTextStyles.Link1.copyWith(
-          color: _isPressed ? MatchAppColors.textColors.textSoft.withOpacity(0.7) : MatchAppColors.textColors.textSoft,
+          color:
+              _isPressed
+                  ? MatchAppColors.textColors.textSoft.withOpacity(0.7)
+                  : MatchAppColors.textColors.textSoft,
         ),
       ),
     ];
@@ -99,7 +106,10 @@ class _LinkMediumSecondaryButtonState extends State<LinkMediumSecondaryButton> {
       Text(
         widget.title,
         style: MatchTextStyles.Link1.copyWith(
-          color: _isPressed ? MatchAppColors.textColors.textSoft.withOpacity(0.24) : MatchAppColors.textColors.textSoft,
+          color:
+              _isPressed
+                  ? MatchAppColors.textColors.textSoft.withOpacity(0.24)
+                  : MatchAppColors.textColors.textSoft,
         ),
       ),
       if (widget.assetName != null) ...[
@@ -115,7 +125,7 @@ class _LinkMediumSecondaryButtonState extends State<LinkMediumSecondaryButton> {
         try {
           await widget.onTap?.call();
         } catch (e) {
-          SnackbarUtils.simpleBottomSnackbar('에러 발생: $e');
+          ToastMessage.defaultToast(message: '에러 발생: $e');
         }
       };
     } else {

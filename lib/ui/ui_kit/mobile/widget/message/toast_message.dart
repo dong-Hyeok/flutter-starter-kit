@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:timf_match/design_system/color/match_app_colors.dart';
-import 'package:timf_match/design_system/style/match_text_styles.dart';
-import 'package:timf_match/resources/images.dart';
 
 class ToastMessage {
   /// [defaultToast]
@@ -24,30 +24,35 @@ class ToastMessage {
     Get.rawSnackbar(
       messageText: Text(
         message,
-        style: MatchTextStyles.Body1_Regular.copyWith(color: MatchAppColors.textColors.textInverse_D),
+        style: MatchTextStyles.Body1_Regular.copyWith(
+          color: MatchAppColors.textColors.textInverse_D,
+        ),
       ),
       snackPosition: position,
       duration: Duration(milliseconds: milliseconds),
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
       borderRadius: 8,
       snackStyle: SnackStyle.FLOATING,
-      backgroundColor: backgroundColor ?? MatchAppColors.interactionColors.interactionTransparentDark,
+      backgroundColor:
+          backgroundColor ??
+          MatchAppColors.interactionColors.interactionTransparentDark,
       forwardAnimationCurve: Curves.decelerate,
       reverseAnimationCurve: Curves.decelerate,
-      mainButton: onButtonPressed != null
-          ? IconButton(
-              onPressed: onButtonPressed,
-              icon: SvgPicture.asset(
-                AppImages.arrowRight,
-                height: 24,
-                width: 24,
-                colorFilter: ColorFilter.mode(
-                  MatchAppColors.iconColors.iconInverse_D,
-                  BlendMode.srcIn,
+      mainButton:
+          onButtonPressed != null
+              ? IconButton(
+                onPressed: onButtonPressed,
+                icon: SvgPicture.asset(
+                  IconPath.arrowRight,
+                  height: 24,
+                  width: 24,
+                  colorFilter: ColorFilter.mode(
+                    MatchAppColors.iconColors.iconInverse_D,
+                    BlendMode.srcIn,
+                  ),
                 ),
-              ),
-            )
-          : null,
+              )
+              : null,
     );
   }
 }

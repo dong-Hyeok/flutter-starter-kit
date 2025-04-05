@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:timf_match/design_system/style/match_chip_styles.dart';
-import 'package:timf_match/design_system/widget/chip/medium_chip.dart';
-import 'package:timf_match/resources/images.dart';
+import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/chip/medium_chip.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_chip_styles.dart';
 
 class MediumChipList extends StatelessWidget {
   final List<String> titles;
@@ -11,7 +11,7 @@ class MediumChipList extends StatelessWidget {
 
   const MediumChipList({
     required this.titles,
-    this.assetName = AppImages.close,
+    this.assetName = IconPath.close,
     this.assetPosition = ChipIconPosition.RIGHT,
     this.onIconTap,
     super.key,

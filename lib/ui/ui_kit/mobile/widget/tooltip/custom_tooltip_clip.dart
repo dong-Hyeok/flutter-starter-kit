@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:timf_match/design_system/style/match_tooltip_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_tooltip_styles.dart';
 
 /// MatchCustomTooltip 에서 사용하는 툴팁 UI를 그리는 클래스
 class CustomTooltipClip extends CustomClipper<Path> {
   final MatchTooltipStyles tooltipStyles;
 
-  CustomTooltipClip({
-    required this.tooltipStyles,
-  });
+  CustomTooltipClip({required this.tooltipStyles});
 
   @override
   Path getClip(Size size) {

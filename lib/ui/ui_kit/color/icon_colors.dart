@@ -81,7 +81,8 @@ class IconColors extends ThemeExtension<IconColors> {
       iconSoft: Color.lerp(iconSoft, other.iconSoft, t)!,
       iconActive: Color.lerp(iconActive, other.iconActive, t)!,
       iconDisabled: Color.lerp(iconDisabled, other.iconDisabled, t)!,
-      iconDisabledSoft: Color.lerp(iconDisabledSoft, other.iconDisabledSoft, t)!,
+      iconDisabledSoft:
+          Color.lerp(iconDisabledSoft, other.iconDisabledSoft, t)!,
       iconInverse: Color.lerp(iconInverse, other.iconInverse, t)!,
       iconInverse_D: Color.lerp(iconInverse_D, other.iconInverse_D, t)!,
       iconPrimary: Color.lerp(iconPrimary, other.iconPrimary, t)!,

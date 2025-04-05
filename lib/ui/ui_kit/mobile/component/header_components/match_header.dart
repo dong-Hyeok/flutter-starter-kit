@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_header_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:timf_match/design_system/style/match_header_styles.dart';
-import 'package:timf_match/design_system/style/match_text_styles.dart';
-import 'package:timf_match/resources/images.dart';
 
 class MatchAppbar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -50,12 +50,8 @@ class MatchAppbar extends StatelessWidget implements PreferredSizeWidget {
   Widget _backPressWidget() {
     return isBackPress
         ? InkWell(
-            onTap: () => Get.back(),
-            child: SvgPicture.asset(
-              AppImages.back,
-              colorFilter: _appBarStyle.iconColor,
-            ),
-          )
+          onTap: () => Get.back(), child: SvgPicture.asset(
+            IconPath.back, colorFilter: _appBarStyle.iconColor))
         : const SizedBox.shrink();
   }
 
@@ -71,12 +67,7 @@ class MatchAppbar extends StatelessWidget implements PreferredSizeWidget {
   Widget _rightIconWidget() {
     return rightIcon != null
         ? InkWell(
-            onTap: onRightIconPressed ?? () {},
-            child: SvgPicture.asset(
-              rightIcon!,
-              colorFilter: _appBarStyle.iconColor,
-            ),
-          )
+          onTap: onRightIconPressed ?? () {}, child: SvgPicture.asset(rightIcon!, colorFilter: _appBarStyle.iconColor))
         : const SizedBox.shrink();
   }
 }

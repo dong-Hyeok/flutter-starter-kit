@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/toast_message.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:timf_match/design_system/color/match_app_colors.dart';
-import 'package:timf_match/design_system/style/match_text_styles.dart';
-import 'package:timf_match/design_system/style/match_button_styles.dart';
-import 'package:timf_match/utils/snackbar_utils.dart';
 
 /// [FloatingMediumPrimaryButton]
 ///
@@ -59,7 +59,10 @@ class FloatingMediumPrimaryButton extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
-            children: assetPosition == ButtonIconPosition.LEFT ? _buildLeftIconLayout() : _buildRightIconLayout(),
+            children:
+                assetPosition == ButtonIconPosition.LEFT
+                    ? _buildLeftIconLayout()
+                    : _buildRightIconLayout(),
           ),
         ),
       ),
@@ -73,9 +76,8 @@ class FloatingMediumPrimaryButton extends StatelessWidget {
       case ButtonWidthOption.CUSTOM:
         return customWidth;
       case ButtonWidthOption.WRAP:
-      default:
-        return null;
     }
+    return null;
   }
 
   EdgeInsets _getPadding() {
@@ -124,7 +126,7 @@ class FloatingMediumPrimaryButton extends StatelessWidget {
         try {
           await onTap?.call();
         } catch (e) {
-          SnackbarUtils.simpleBottomSnackbar('에러 발생: $e');
+          ToastMessage.defaultToast(message: '에러 발생: $e');
         }
       };
     } else {

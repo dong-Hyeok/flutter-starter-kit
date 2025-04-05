@@ -2,18 +2,18 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
+import 'package:flutter_starter_kit/data/controller/util_controller/timer_controller.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_primary_button.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_secondary_button.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_textfield_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:timf_match/data/user_controller/timer_controller.dart';
-import 'package:timf_match/design_system/color/match_app_colors.dart';
-import 'package:timf_match/design_system/style/match_button_styles.dart';
-import 'package:timf_match/design_system/style/match_message_styles.dart';
-import 'package:timf_match/design_system/style/match_text_styles.dart';
-import 'package:timf_match/design_system/style/match_textfield_styles.dart';
-import 'package:timf_match/design_system/widget/button/large_primary_button.dart';
-import 'package:timf_match/design_system/widget/button/large_secondary_button.dart';
-import 'package:timf_match/design_system/widget/message/supporting_message.dart';
-import 'package:timf_match/resources/images.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/supporting_message.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_message_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
 
 /// [MatchTextFieldWithButton] 컴포넌트
 /// ### 텍스트 필드와 우측 버튼이 함께 있는 컴포넌트
@@ -189,7 +189,7 @@ class MatchTextFieldWithButtonState extends State<MatchTextFieldWithButton> {
         if (_errorText != null)
           SupportingMessage(text: _errorText!, messageStyles: MatchMessageStyles.ERROR)
         else if (widget.helperText != null)
-          SupportingMessage(text: widget.helperText!, messageStyles: MatchMessageStyles.HELPER)
+          SupportingMessage(text: widget.helperText!, messageStyles: MatchMessageStyles.HELPER),
       ],
     );
   }
@@ -218,9 +218,9 @@ class MatchTextFieldWithButtonState extends State<MatchTextFieldWithButton> {
   Widget _defaultLabel() {
     return widget.labelText != null
         ? Padding(
-            padding: const EdgeInsets.only(bottom: 4.0),
-            child: Text(widget.labelText!, style: MatchTextStyles.Label1),
-          )
+          padding: const EdgeInsets.only(bottom: 4.0),
+          child: Text(widget.labelText!, style: MatchTextStyles.Label1),
+        )
         : const SizedBox.shrink();
   }
 
@@ -240,7 +240,10 @@ class MatchTextFieldWithButtonState extends State<MatchTextFieldWithButton> {
           obscureText: isObscure,
           inputFormatters: widget.textInputFormatterList,
           style: MatchTextStyles.Body1_Regular.copyWith(
-            color: widget.isEnable ? MatchAppColors.textColors.textDefault : MatchAppColors.textColors.textDisabled,
+            color:
+                widget.isEnable
+                    ? MatchAppColors.textColors.textDefault
+                    : MatchAppColors.textColors.textDisabled,
           ),
           decoration: _defaultInputDecoration(),
           onChanged: (value) {
@@ -270,7 +273,10 @@ class MatchTextFieldWithButtonState extends State<MatchTextFieldWithButton> {
     var outlineInputBorderDefault = OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
       borderSide: BorderSide(
-        color: _errorText == null ? MatchAppColors.strokeColors.strokeDefault : MatchAppColors.strokeColors.strokeError,
+        color:
+            _errorText == null
+                ? MatchAppColors.strokeColors.strokeDefault
+                : MatchAppColors.strokeColors.strokeError,
         width: 1,
       ),
     );
@@ -278,7 +284,10 @@ class MatchTextFieldWithButtonState extends State<MatchTextFieldWithButton> {
     var outlineInputBorderFocus = OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
       borderSide: BorderSide(
-        color: _errorText == null ? MatchAppColors.strokeColors.strokeFocus : MatchAppColors.strokeColors.strokeError,
+        color:
+            _errorText == null
+                ? MatchAppColors.strokeColors.strokeFocus
+                : MatchAppColors.strokeColors.strokeError,
         width: 1,
       ),
     );
@@ -286,12 +295,20 @@ class MatchTextFieldWithButtonState extends State<MatchTextFieldWithButton> {
     return InputDecoration(
       contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 14),
       filled: true,
-      fillColor: widget.isEnable ? MatchAppColors.fillColors.fillDefault : MatchAppColors.fillColors.fillDisabled,
+      fillColor:
+          widget.isEnable
+              ? MatchAppColors.fillColors.fillDefault
+              : MatchAppColors.fillColors.fillDisabled,
       hintText: widget.hintText ?? '',
       hintStyle: MatchTextStyles.Body1_Regular.copyWith(
-          color: widget.isEnable ? MatchAppColors.textColors.textPlaceholder : MatchAppColors.textColors.textDisabled),
+        color:
+            widget.isEnable
+                ? MatchAppColors.textColors.textPlaceholder
+                : MatchAppColors.textColors.textDisabled,
+      ),
       border: outlineInputBorderDefault, // 기본 테두리 스타일
-      focusedBorder: widget.onTap == null ? outlineInputBorderFocus : outlineInputBorderDefault, // 포커스 상태 테두리
+      focusedBorder:
+          widget.onTap == null ? outlineInputBorderFocus : outlineInputBorderDefault, // 포커스 상태 테두리
       enabledBorder: outlineInputBorderDefault, // 활성화 상태 테두리
       disabledBorder: outlineInputBorderDefault, // 비활성화 상태 테두리
       prefixIcon: preffixIconWidget(),
@@ -342,7 +359,7 @@ class MatchTextFieldWithButtonState extends State<MatchTextFieldWithButton> {
                   _errorText = null;
                 });
               },
-              child: SvgPicture.asset(AppImages.grayCircleDelete, height: 24, width: 24),
+              child: SvgPicture.asset(IconPath.grayCircleDelete, height: 24, width: 24),
             ),
           ),
 
@@ -401,12 +418,21 @@ class MatchTextFieldWithButtonState extends State<MatchTextFieldWithButton> {
           child: IntrinsicWidth(
             child: Center(
               child: Obx(() {
-                final minutes = (timerController.remainingSeconds.value ~/ 60).toString().padLeft(2, '');
-                final seconds = (timerController.remainingSeconds.value % 60).toString().padLeft(2, '0');
+                final minutes = (timerController.remainingSeconds.value ~/ 60).toString().padLeft(
+                  2,
+                  '',
+                );
+                final seconds = (timerController.remainingSeconds.value % 60).toString().padLeft(
+                  2,
+                  '0',
+                );
                 return Text(
                   "$minutes:$seconds",
                   style: MatchTextStyles.Caption1.copyWith(
-                    color: _errorText == null ? MatchAppColors.textColors.textActive : MatchAppColors.textColors.textError,
+                    color:
+                        _errorText == null
+                            ? MatchAppColors.textColors.textActive
+                            : MatchAppColors.textColors.textError,
                   ),
                 );
               }),

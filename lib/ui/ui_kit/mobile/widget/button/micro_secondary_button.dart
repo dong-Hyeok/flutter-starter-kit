@@ -2,10 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:timf_match/design_system/color/match_app_colors.dart';
-import 'package:timf_match/design_system/style/match_text_styles.dart';
-import 'package:timf_match/design_system/style/match_button_styles.dart';
-import 'package:timf_match/utils/snackbar_utils.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/toast_message.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
 
 /// [MicroSecondaryButton]
 ///
@@ -41,7 +41,10 @@ class MicroSecondaryButton extends StatelessWidget {
     return Ink(
       height: 28.0,
       decoration: BoxDecoration(
-        color: isEnable ? MatchAppColors.fillColors.fillSecondary : MatchAppColors.fillColors.fillDisabled,
+        color:
+            isEnable
+                ? MatchAppColors.fillColors.fillSecondary
+                : MatchAppColors.fillColors.fillDisabled,
         borderRadius: BorderRadius.circular(4.0),
       ),
       child: InkWell(
@@ -55,8 +58,12 @@ class MicroSecondaryButton extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: widthOption == ButtonWidthOption.WRAP ? MainAxisSize.min : MainAxisSize.max,
-            children: assetPosition == ButtonIconPosition.LEFT ? _buildLeftIconLayout() : _buildRightIconLayout(),
+            mainAxisSize:
+                widthOption == ButtonWidthOption.WRAP ? MainAxisSize.min : MainAxisSize.max,
+            children:
+                assetPosition == ButtonIconPosition.LEFT
+                    ? _buildLeftIconLayout()
+                    : _buildRightIconLayout(),
           ),
         ),
       ),
@@ -70,9 +77,9 @@ class MicroSecondaryButton extends StatelessWidget {
       case ButtonWidthOption.CUSTOM:
         return customWidth;
       case ButtonWidthOption.WRAP:
-      default:
-        return null;
     }
+
+    return null;
   }
 
   EdgeInsets _getPadding() {
@@ -93,7 +100,10 @@ class MicroSecondaryButton extends StatelessWidget {
       Text(
         title,
         style: MatchTextStyles.Button2.copyWith(
-          color: isEnable ? MatchAppColors.textColors.textDefault : MatchAppColors.textColors.textDisabled,
+          color:
+              isEnable
+                  ? MatchAppColors.textColors.textDefault
+                  : MatchAppColors.textColors.textDisabled,
         ),
       ),
     ];
@@ -105,7 +115,10 @@ class MicroSecondaryButton extends StatelessWidget {
       Text(
         title,
         style: MatchTextStyles.Button2.copyWith(
-          color: isEnable ? MatchAppColors.textColors.textDefault : MatchAppColors.textColors.textDisabled,
+          color:
+              isEnable
+                  ? MatchAppColors.textColors.textDefault
+                  : MatchAppColors.textColors.textDisabled,
         ),
       ),
       if (assetName != null) ...[
@@ -121,7 +134,7 @@ class MicroSecondaryButton extends StatelessWidget {
         try {
           await onTap?.call();
         } catch (e) {
-          SnackbarUtils.simpleBottomSnackbar('에러 발생: $e');
+          ToastMessage.defaultToast(message: '에러 발생: $e');
         }
       };
     } else {

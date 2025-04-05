@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
+class MatchFontWeight {
+  static const Bold = FontWeight.w700;
+  static const SemiBold = FontWeight.w600;
+  static const Medium = FontWeight.w500;
+  static const Regular = FontWeight.w400;
+}
+
 class MatchTextStyles {
   static const TextStyle Title = TextStyle(
     fontSize: 18,
@@ -19,7 +26,7 @@ class MatchTextStyles {
 
   static const TextStyle Headline2_SemiBold = TextStyle(
     fontSize: 16,
-    fontWeight: MatchFontWeiht.SemiBold,
+    fontWeight: MatchFontWeight.SemiBold,
     height: 1.5, // 24 / 16
     letterSpacing: -0.08,
     fontFamily: "Pretendard",

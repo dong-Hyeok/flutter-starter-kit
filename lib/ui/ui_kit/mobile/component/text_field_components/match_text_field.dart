@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:timf_match/design_system/color/match_app_colors.dart';
-import 'package:timf_match/design_system/style/match_message_styles.dart';
-import 'package:timf_match/design_system/style/match_text_styles.dart';
-import 'package:timf_match/design_system/widget/message/supporting_message.dart';
-import 'package:timf_match/resources/images.dart';
+import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/supporting_message.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_message_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
+
 
 /// [MatchTextField] 위젯
 /// ### validator 와 formFieldKey 사용하지 않는 이유
@@ -166,7 +167,7 @@ class MatchTextFieldState extends State<MatchTextField> {
         if (_errorText != null)
           SupportingMessage(text: _errorText!, messageStyles: MatchMessageStyles.ERROR)
         else if (widget.helperText != null)
-          SupportingMessage(text: widget.helperText!, messageStyles: MatchMessageStyles.HELPER)
+          SupportingMessage(text: widget.helperText!, messageStyles: MatchMessageStyles.HELPER),
       ],
     );
   }
@@ -175,9 +176,9 @@ class MatchTextFieldState extends State<MatchTextField> {
   Widget _defaultLabel() {
     return widget.labelText != null
         ? Padding(
-            padding: const EdgeInsets.only(bottom: 4.0),
-            child: Text(widget.labelText!, style: MatchTextStyles.Label1),
-          )
+          padding: const EdgeInsets.only(bottom: 4.0),
+          child: Text(widget.labelText!, style: MatchTextStyles.Label1),
+        )
         : const SizedBox.shrink();
   }
 
@@ -194,7 +195,10 @@ class MatchTextFieldState extends State<MatchTextField> {
       obscureText: isObscure,
       inputFormatters: widget.textInputFormatterList,
       style: MatchTextStyles.Body1_Regular.copyWith(
-        color: widget.isEnable ? MatchAppColors.textColors.textDefault : MatchAppColors.textColors.textDisabled,
+        color:
+            widget.isEnable
+                ? MatchAppColors.textColors.textDefault
+                : MatchAppColors.textColors.textDisabled,
       ),
       decoration: _defaultInputDecoration(),
       onChanged: (value) {
@@ -222,7 +226,10 @@ class MatchTextFieldState extends State<MatchTextField> {
     var outlineInputBorderDefault = OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
       borderSide: BorderSide(
-        color: _errorText == null ? MatchAppColors.strokeColors.strokeDefault : MatchAppColors.strokeColors.strokeError,
+        color:
+            _errorText == null
+                ? MatchAppColors.strokeColors.strokeDefault
+                : MatchAppColors.strokeColors.strokeError,
         width: 1,
       ),
     );
@@ -230,7 +237,10 @@ class MatchTextFieldState extends State<MatchTextField> {
     var outlineInputBorderFocus = OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
       borderSide: BorderSide(
-        color: _errorText == null ? MatchAppColors.strokeColors.strokeFocus : MatchAppColors.strokeColors.strokeError,
+        color:
+            _errorText == null
+                ? MatchAppColors.strokeColors.strokeFocus
+                : MatchAppColors.strokeColors.strokeError,
         width: 1,
       ),
     );
@@ -238,12 +248,20 @@ class MatchTextFieldState extends State<MatchTextField> {
     return InputDecoration(
       contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 14),
       filled: true,
-      fillColor: widget.isEnable ? MatchAppColors.fillColors.fillDefault : MatchAppColors.fillColors.fillDisabled,
+      fillColor:
+          widget.isEnable
+              ? MatchAppColors.fillColors.fillDefault
+              : MatchAppColors.fillColors.fillDisabled,
       hintText: widget.hintText ?? '',
       hintStyle: MatchTextStyles.Body1_Regular.copyWith(
-          color: widget.isEnable ? MatchAppColors.textColors.textPlaceholder : MatchAppColors.textColors.textDisabled),
+        color:
+            widget.isEnable
+                ? MatchAppColors.textColors.textPlaceholder
+                : MatchAppColors.textColors.textDisabled,
+      ),
       border: outlineInputBorderDefault, // 기본 테두리 스타일
-      focusedBorder: widget.onTap == null ? outlineInputBorderFocus : outlineInputBorderDefault, // 포커스 상태 테두리
+      focusedBorder:
+          widget.onTap == null ? outlineInputBorderFocus : outlineInputBorderDefault, // 포커스 상태 테두리
       enabledBorder: outlineInputBorderDefault, // 활성화 상태 테두리
       disabledBorder: outlineInputBorderDefault, // 비활성화 상태 테두리
       prefixIcon: preffixIconWidget(),
@@ -281,17 +299,17 @@ class MatchTextFieldState extends State<MatchTextField> {
         // (x) 아이콘은 고정 && 포커스가 있을때만 visible
         _isFocused
             ? Padding(
-                padding: const EdgeInsets.only(left: 6.0),
-                child: GestureDetector(
-                  onTap: () {
-                    widget.controller.clear();
-                    setState(() {
-                      _errorText = null;
-                    });
-                  },
-                  child: SvgPicture.asset(AppImages.grayCircleDelete, height: 24, width: 24),
-                ),
-              )
+              padding: const EdgeInsets.only(left: 6.0),
+              child: GestureDetector(
+                onTap: () {
+                  widget.controller.clear();
+                  setState(() {
+                    _errorText = null;
+                  });
+                },
+                child: SvgPicture.asset(IconPath.grayCircleDelete, height: 24, width: 24),
+              ),
+            )
             : const SizedBox.shrink(),
         // 비밀번호 아이콘 (옵션 아이콘 없으면서 && 비밀번호 타입 사용시)
         if (widget.suffixIconAsset == null && widget.isObscureText)

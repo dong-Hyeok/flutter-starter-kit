@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:timf_match/design_system/color/match_app_colors.dart';
-import 'package:timf_match/design_system/style/match_control_styles.dart';
-import 'package:timf_match/design_system/widget/control/custom_check_box.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/control/custom_check_box.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_control_styles.dart';
 
 /// [CheckBoxList] 위젯
 ///

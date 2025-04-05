@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_primary_button.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/drag_handle.dart';
 import 'package:get/get.dart';
-import 'package:timf_match/design_system/widget/drag_handle.dart';
-import 'package:timf_match/screens/commons/common_widget/text_button_widget.dart';
 
 class YearMonthPickerView extends StatelessWidget {
   final DateTime startDate;
@@ -66,10 +66,9 @@ class YearMonthPickerView extends StatelessWidget {
           const SizedBox(height: 8.0),
           Padding(
             padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 12.0, bottom: 33.0),
-            child: TextButtonWidget(
-              text: '적용',
-              isEnable: true,
-              onClick: () {
+            child: LargePrimaryButton(
+              title: '적용',
+              onTap: () {
                 onApply(selectedDate.value);
               },
             ),

@@ -1,13 +1,13 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_primary_button.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_secondary_button.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:timf_match/design_system/color/match_app_colors.dart';
-import 'package:timf_match/design_system/style/match_button_styles.dart';
-import 'package:timf_match/design_system/style/match_text_styles.dart';
-import 'package:timf_match/design_system/widget/button/large_primary_button.dart';
-import 'package:timf_match/design_system/widget/button/large_secondary_button.dart';
-import 'package:timf_match/resources/images.dart';
 
 /// [MatchBottomSheet]
 ///
@@ -85,7 +85,9 @@ class MatchBottomSheet extends StatelessWidget {
               _dragHandle(),
               _titleWidget(),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: isHorizontalPadding ? 16.0 : 0),
+                padding: EdgeInsets.symmetric(
+                  horizontal: isHorizontalPadding ? 16.0 : 0,
+                ),
                 child: bodyWidget,
               ),
             ],
@@ -98,7 +100,7 @@ class MatchBottomSheet extends StatelessWidget {
                 _androidBottomHandle(),
               } else ...{
                 _iOSBottomHandle(),
-              }
+              },
             ],
           ),
         ],
@@ -126,12 +128,12 @@ class MatchBottomSheet extends StatelessWidget {
               GestureDetector(
                 onTap: onClickTitleIcon,
                 child: SvgPicture.asset(
-                  AppImages.circleQuestion,
+                  IconPath.circleQuestion,
                   height: 16,
                   width: 16,
                 ),
-              )
-            }
+              ),
+            },
           ],
         ),
       );
@@ -205,7 +207,7 @@ class MatchBottomSheet extends StatelessWidget {
                 widthOption: ButtonWidthOption.FULL,
               ),
             ),
-          }
+          },
         ],
       ),
     );

@@ -1,7 +1,4 @@
-enum MatchTextFieldWithButtonStyles {
-  LARGE_PRIMARY,
-  LARGE_SECONDARY,
-}
+enum MatchTextFieldWithButtonStyles { LARGE_PRIMARY, LARGE_SECONDARY }
 
 enum MatchTextFieldTimerStatus {
   TIMER_ON, // 타이머 시작

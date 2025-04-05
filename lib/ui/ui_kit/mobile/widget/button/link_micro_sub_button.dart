@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:timf_match/design_system/color/match_app_colors.dart';
-import 'package:timf_match/design_system/style/match_text_styles.dart';
-import 'package:timf_match/utils/snackbar_utils.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/toast_message.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
 
 /// [LinkMicroSubButton]
 ///
@@ -61,9 +61,14 @@ class _LinkMicroSubButtonState extends State<LinkMicroSubButton> {
           child: Text(
             widget.title,
             style: MatchTextStyles.Link2.copyWith(
-              color: _isPressed ? MatchAppColors.textColors.textSoft.withOpacity(0.24) : MatchAppColors.textColors.textSoft,
+              color:
+                  _isPressed
+                      ? MatchAppColors.textColors.textSoft.withOpacity(0.24)
+                      : MatchAppColors.textColors.textSoft,
               decorationColor:
-                  _isPressed ? MatchAppColors.textColors.textSoft.withOpacity(0.24) : MatchAppColors.textColors.textSoft,
+                  _isPressed
+                      ? MatchAppColors.textColors.textSoft.withOpacity(0.24)
+                      : MatchAppColors.textColors.textSoft,
             ),
           ),
         ),
@@ -77,7 +82,7 @@ class _LinkMicroSubButtonState extends State<LinkMicroSubButton> {
         try {
           await widget.onTap?.call();
         } catch (e) {
-          SnackbarUtils.simpleBottomSnackbar('에러 발생: $e');
+          ToastMessage.defaultToast(message: '에러 발생: $e');
         }
       };
     } else {

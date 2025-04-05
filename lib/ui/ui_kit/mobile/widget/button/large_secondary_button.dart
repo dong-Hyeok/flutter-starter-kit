@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:timf_match/design_system/color/match_app_colors.dart';
-import 'package:timf_match/design_system/style/match_button_styles.dart';
-import 'package:timf_match/design_system/style/match_text_styles.dart';
-import 'package:timf_match/utils/snackbar_utils.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/toast_message.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
 
 /// [LargeSecondaryButton]
 ///
@@ -41,7 +41,10 @@ class LargeSecondaryButton extends StatelessWidget {
     return Ink(
       height: 52.0,
       decoration: BoxDecoration(
-        color: isEnable ? MatchAppColors.fillColors.fillSecondary : MatchAppColors.fillColors.fillDisabled,
+        color:
+            isEnable
+                ? MatchAppColors.fillColors.fillSecondary
+                : MatchAppColors.fillColors.fillDisabled,
         borderRadius: BorderRadius.circular(8.0),
       ),
       child: InkWell(
@@ -56,7 +59,10 @@ class LargeSecondaryButton extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
-            children: assetPosition == ButtonIconPosition.LEFT ? _buildLeftIconLayout() : _buildRightIconLayout(),
+            children:
+                assetPosition == ButtonIconPosition.LEFT
+                    ? _buildLeftIconLayout()
+                    : _buildRightIconLayout(),
           ),
         ),
       ),
@@ -70,9 +76,9 @@ class LargeSecondaryButton extends StatelessWidget {
       case ButtonWidthOption.CUSTOM:
         return customWidth;
       case ButtonWidthOption.WRAP:
-      default:
-        return null;
     }
+
+    return null;
   }
 
   EdgeInsets _getPadding() {
@@ -93,7 +99,10 @@ class LargeSecondaryButton extends StatelessWidget {
       Text(
         title,
         style: MatchTextStyles.Button1.copyWith(
-          color: isEnable ? MatchAppColors.textColors.textDefault : MatchAppColors.textColors.textDisabled,
+          color:
+              isEnable
+                  ? MatchAppColors.textColors.textDefault
+                  : MatchAppColors.textColors.textDisabled,
         ),
       ),
     ];
@@ -105,7 +114,10 @@ class LargeSecondaryButton extends StatelessWidget {
       Text(
         title,
         style: MatchTextStyles.Button1.copyWith(
-          color: isEnable ? MatchAppColors.textColors.textDefault : MatchAppColors.textColors.textDisabled,
+          color:
+              isEnable
+                  ? MatchAppColors.textColors.textDefault
+                  : MatchAppColors.textColors.textDisabled,
         ),
       ),
       if (assetName != null) ...[
@@ -121,7 +133,7 @@ class LargeSecondaryButton extends StatelessWidget {
         try {
           await onTap?.call();
         } catch (e) {
-          SnackbarUtils.simpleBottomSnackbar('에러 발생: $e');
+          ToastMessage.defaultToast(message: '에러 발생: $e');
         }
       };
     } else {

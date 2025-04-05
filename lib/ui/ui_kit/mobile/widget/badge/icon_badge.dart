@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:timf_match/design_system/style/match_text_styles.dart';
 
 /// [IconBadge]
 ///
@@ -35,11 +35,7 @@ class IconBadge extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          SvgPicture.asset(
-            icon,
-            height: 16.0,
-            width: 16.0,
-          ),
+          SvgPicture.asset(icon, height: 16.0, width: 16.0),
           const SizedBox(width: 2.0),
           Text(
             content,

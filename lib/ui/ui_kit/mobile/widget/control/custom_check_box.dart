@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_control_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:timf_match/design_system/style/match_control_styles.dart';
-import 'package:timf_match/resources/images.dart';
-import 'package:timf_match/design_system/style/match_text_styles.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
 
 /// [CustomCheckBox]
 ///
@@ -29,15 +30,15 @@ class CustomCheckBox extends StatelessWidget {
 
     switch (type) {
       case CheckBoxType.title:
-        icon = isCheck ? AppImages.iconCheckCircle : AppImages.iconUncheckCircle;
+        icon = isCheck ? IconPath.iconCheckCircle : IconPath.iconUncheckCircle;
         textStyle = MatchTextStyles.Headline2_SemiBold;
         break;
       case CheckBoxType.normal:
-        icon = isCheck ? AppImages.iconCheckSquare : AppImages.iconUncheckSquare;
+        icon = isCheck ? IconPath.iconCheckSquare : IconPath.iconUncheckSquare;
         textStyle = MatchTextStyles.Label1;
         break;
       case CheckBoxType.sub:
-        icon = isCheck ? AppImages.iconCheck : AppImages.iconUncheck;
+        icon = isCheck ? IconPath.iconCheck : IconPath.iconUncheck;
         textStyle = MatchTextStyles.Label1;
         break;
     }

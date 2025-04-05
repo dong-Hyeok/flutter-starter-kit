@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:timf_match/design_system/color/match_app_colors.dart';
-import 'package:timf_match/design_system/widget/control/custom_radio.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/control/custom_radio.dart';
 
 /// [RadioButtonList] 위젯
 ///

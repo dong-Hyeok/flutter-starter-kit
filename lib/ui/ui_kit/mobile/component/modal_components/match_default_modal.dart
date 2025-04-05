@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_primary_button.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_secondary_button.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
 import 'package:get/get.dart';
-import 'package:timf_match/design_system/color/match_app_colors.dart';
-import 'package:timf_match/design_system/style/match_button_styles.dart';
-import 'package:timf_match/design_system/style/match_text_styles.dart';
-import 'package:timf_match/design_system/widget/button/large_primary_button.dart';
-import 'package:timf_match/design_system/widget/button/large_secondary_button.dart';
 
 /// [MatchDefaltDialog]
 ///
@@ -93,9 +93,14 @@ class MatchDefaultModal extends StatelessWidget {
     return body == null
         ? const SizedBox.shrink()
         : Padding(
-            padding: const EdgeInsets.only(top: 8.0),
-            child: Text(body!, style: MatchTextStyles.Body1_Regular.copyWith(color: MatchAppColors.textColors.textDefault)),
-          );
+          padding: const EdgeInsets.only(top: 8.0),
+          child: Text(
+            body!,
+            style: MatchTextStyles.Body1_Regular.copyWith(
+              color: MatchAppColors.textColors.textDefault,
+            ),
+          ),
+        );
   }
 
   // 하단 버튼

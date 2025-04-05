@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_chip_styles.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:timf_match/design_system/color/match_app_colors.dart';
-import 'package:timf_match/design_system/style/match_chip_styles.dart';
-import 'package:timf_match/design_system/style/match_text_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
 
 /// [DefaultChip]
 ///
@@ -46,7 +46,10 @@ class DefaultChip extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
-        children: assetPosition == ChipIconPosition.LEFT ? _buildLeftIconLayout() : _buildRightIconLayout(),
+        children:
+            assetPosition == ChipIconPosition.LEFT
+                ? _buildLeftIconLayout()
+                : _buildRightIconLayout(),
       ),
     );
   }
@@ -61,7 +64,10 @@ class DefaultChip extends StatelessWidget {
       Text(
         title,
         style: MatchTextStyles.Label1.copyWith(
-          color: isActive ? MatchAppColors.textColors.textInverse_D : MatchAppColors.textColors.textSoft,
+          color:
+              isActive
+                  ? MatchAppColors.textColors.textInverse_D
+                  : MatchAppColors.textColors.textSoft,
         ),
       ),
     ];
@@ -73,7 +79,10 @@ class DefaultChip extends StatelessWidget {
       Text(
         title,
         style: MatchTextStyles.Label1.copyWith(
-          color: isActive ? MatchAppColors.textColors.textInverse_D : MatchAppColors.textColors.textSoft,
+          color:
+              isActive
+                  ? MatchAppColors.textColors.textInverse_D
+                  : MatchAppColors.textColors.textSoft,
         ),
       ),
       if (assetName != null) ...[

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/tooltip/custom_tooltip_clip.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_tooltip_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:timf_match/design_system/color/match_app_colors.dart';
-import 'package:timf_match/design_system/style/match_text_styles.dart';
-import 'package:timf_match/design_system/style/match_tooltip_styles.dart';
-import 'package:timf_match/design_system/widget/tooltip/custom_tooltip_clip.dart';
 
 /// [MatchCustomTooltip]
 ///
@@ -51,13 +51,8 @@ class _MatchCustomTooltipState extends State<MatchCustomTooltip> {
       child: IntrinsicWidth(
         child: Row(
           children: [
-            if (widget.subWidget != null) ...{
-              widget.subWidget!,
-            },
-            Container(
-              key: _iconKey,
-              child: widget.iconWidget,
-            ),
+            if (widget.subWidget != null) ...{widget.subWidget!},
+            Container(key: _iconKey, child: widget.iconWidget),
           ],
         ),
       ),
@@ -100,7 +95,8 @@ class _MatchCustomTooltipState extends State<MatchCustomTooltip> {
 
     /// 툴팁 바인딩시 툴팁 넓이 얻기
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      final RenderBox tooltipRenderBox = _tooltipKey.currentContext?.findRenderObject() as RenderBox;
+      final RenderBox tooltipRenderBox =
+          _tooltipKey.currentContext?.findRenderObject() as RenderBox;
       final tooltipWidth = tooltipRenderBox.size.width;
 
       _overlayEntry?.remove();

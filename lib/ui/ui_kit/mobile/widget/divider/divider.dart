@@ -10,10 +10,7 @@ Widget topBorderDivider({
     decoration: BoxDecoration(
       color: color,
       border: Border(
-        top: BorderSide(
-          color: topBorderColor,
-          width: borderWidth,
-        ),
+        top: BorderSide(color: topBorderColor, width: borderWidth),
       ),
     ),
     height: height,

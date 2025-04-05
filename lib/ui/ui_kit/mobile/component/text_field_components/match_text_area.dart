@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:timf_match/design_system/color/match_app_colors.dart';
-import 'package:timf_match/design_system/style/match_message_styles.dart';
-import 'package:timf_match/design_system/style/match_text_styles.dart';
-import 'package:timf_match/design_system/widget/message/supporting_message.dart';
-import 'package:timf_match/services/logger_service.dart';
+import 'package:flutter_starter_kit/core/logger/app_logger';
+import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/supporting_message.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_message_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
+
 
 /// [DefaultTextArea] 위젯
 ///
@@ -118,7 +119,7 @@ class MatchTextAreaState extends State<MatchTextArea> {
         if (_errorText != null)
           SupportingMessage(text: _errorText!, messageStyles: MatchMessageStyles.ERROR)
         else if (widget.helperText != null)
-          SupportingMessage(text: widget.helperText!, messageStyles: MatchMessageStyles.HELPER)
+          SupportingMessage(text: widget.helperText!, messageStyles: MatchMessageStyles.HELPER),
       ],
     );
   }
@@ -127,9 +128,9 @@ class MatchTextAreaState extends State<MatchTextArea> {
   Widget _defaultLabel() {
     return widget.labelText != null
         ? Padding(
-            padding: const EdgeInsets.only(bottom: 4.0),
-            child: Text(widget.labelText!, style: MatchTextStyles.Label1),
-          )
+          padding: const EdgeInsets.only(bottom: 4.0),
+          child: Text(widget.labelText!, style: MatchTextStyles.Label1),
+        )
         : const SizedBox.shrink();
   }
 
@@ -148,7 +149,9 @@ class MatchTextAreaState extends State<MatchTextArea> {
           obscureText: isObscure,
           textAlignVertical: TextAlignVertical.top,
           inputFormatters: widget.textInputFormatterList,
-          style: MatchTextStyles.Body1_Regular.copyWith(color: MatchAppColors.textColors.textDefault),
+          style: MatchTextStyles.Body1_Regular.copyWith(
+            color: MatchAppColors.textColors.textDefault,
+          ),
           decoration: _defaultInputDecoration(),
           onChanged: (value) {
             setState(() {
@@ -173,11 +176,15 @@ class MatchTextAreaState extends State<MatchTextArea> {
             children: [
               Text(
                 '${widget.controller.text.length}',
-                style: MatchTextStyles.Body3_Regular.copyWith(color: MatchAppColors.textColors.textSoft),
+                style: MatchTextStyles.Body3_Regular.copyWith(
+                  color: MatchAppColors.textColors.textSoft,
+                ),
               ),
               Text(
                 '/${widget.maxLength}',
-                style: MatchTextStyles.Body3_Medium.copyWith(color: MatchAppColors.textColors.textDefault),
+                style: MatchTextStyles.Body3_Medium.copyWith(
+                  color: MatchAppColors.textColors.textDefault,
+                ),
               ),
             ],
           ),
@@ -191,7 +198,10 @@ class MatchTextAreaState extends State<MatchTextArea> {
     var outlineInputBorderDefault = OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
       borderSide: BorderSide(
-        color: _errorText == null ? MatchAppColors.strokeColors.strokeDefault : MatchAppColors.strokeColors.strokeError,
+        color:
+            _errorText == null
+                ? MatchAppColors.strokeColors.strokeDefault
+                : MatchAppColors.strokeColors.strokeError,
         width: 1,
       ),
     );
@@ -199,7 +209,10 @@ class MatchTextAreaState extends State<MatchTextArea> {
     var outlineInputBorderFocus = OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
       borderSide: BorderSide(
-        color: _errorText == null ? MatchAppColors.strokeColors.strokeFocus : MatchAppColors.strokeColors.strokeError,
+        color:
+            _errorText == null
+                ? MatchAppColors.strokeColors.strokeFocus
+                : MatchAppColors.strokeColors.strokeError,
         width: 1,
       ),
     );
@@ -207,12 +220,20 @@ class MatchTextAreaState extends State<MatchTextArea> {
     return InputDecoration(
       contentPadding: const EdgeInsets.only(left: 12, right: 12, top: 8, bottom: 20),
       filled: true,
-      fillColor: widget.isEnable ? MatchAppColors.fillColors.fillDefault : MatchAppColors.fillColors.fillDisabled,
+      fillColor:
+          widget.isEnable
+              ? MatchAppColors.fillColors.fillDefault
+              : MatchAppColors.fillColors.fillDisabled,
       hintText: widget.hintText ?? '',
       hintStyle: MatchTextStyles.Body1_Regular.copyWith(
-          color: widget.isEnable ? MatchAppColors.textColors.textPlaceholder : MatchAppColors.textColors.textDisabled),
+        color:
+            widget.isEnable
+                ? MatchAppColors.textColors.textPlaceholder
+                : MatchAppColors.textColors.textDisabled,
+      ),
       border: outlineInputBorderDefault, // 기본 테두리 스타일
-      focusedBorder: widget.onTap == null ? outlineInputBorderFocus : outlineInputBorderDefault, // 포커스 상태 테두리
+      focusedBorder:
+          widget.onTap == null ? outlineInputBorderFocus : outlineInputBorderDefault, // 포커스 상태 테두리
       enabledBorder: outlineInputBorderDefault, // 활성화 상태 테두리
       disabledBorder: outlineInputBorderDefault, // 비활성화 상태 테두리
       counterText: '', // 텍스트 카운터 비활성
