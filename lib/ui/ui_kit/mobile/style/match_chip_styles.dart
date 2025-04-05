@@ -1,0 +1,4 @@
+enum ChipIconPosition {
+  LEFT,
+  RIGHT,
+}
