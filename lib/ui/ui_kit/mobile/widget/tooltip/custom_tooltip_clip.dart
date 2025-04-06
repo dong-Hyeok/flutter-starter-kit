@@ -27,13 +27,7 @@ class CustomTooltipClip extends CustomClipper<Path> {
   }
 
   /// [사각형그림] - 타입 두개
-  void _getRRect(
-    Path path,
-    double height,
-    double width,
-    double triangleHeight,
-    tooltipStyles,
-  ) {
+  void _getRRect(Path path, double height, double width, double triangleHeight, tooltipStyles) {
     if (tooltipStyles == MatchTooltipStyles.START_TOP ||
         tooltipStyles == MatchTooltipStyles.CENTER_TOP ||
         tooltipStyles == MatchTooltipStyles.END_TOP) {

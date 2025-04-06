@@ -122,8 +122,7 @@ class FillColors extends ThemeExtension<FillColors> {
       fillSoft2_D: Color.lerp(fillSoft2_D, other.fillSoft2_D, t)!,
       fillDisabled: Color.lerp(fillDisabled, other.fillDisabled, t)!,
       fillPrimarySoft: Color.lerp(fillPrimarySoft, other.fillPrimarySoft, t)!,
-      fillDisabledSoft:
-          Color.lerp(fillDisabledSoft, other.fillDisabledSoft, t)!,
+      fillDisabledSoft: Color.lerp(fillDisabledSoft, other.fillDisabledSoft, t)!,
       fillPrimary: Color.lerp(fillPrimary, other.fillPrimary, t)!,
       fillPrimary_D: Color.lerp(fillPrimary_D, other.fillPrimary_D, t)!,
       fillSecondary: Color.lerp(fillSecondary, other.fillSecondary, t)!,

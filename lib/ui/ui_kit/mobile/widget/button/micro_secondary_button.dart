@@ -41,10 +41,7 @@ class MicroSecondaryButton extends StatelessWidget {
     return Ink(
       height: 28.0,
       decoration: BoxDecoration(
-        color:
-            isEnable
-                ? MatchAppColors.fillColors.fillSecondary
-                : MatchAppColors.fillColors.fillDisabled,
+        color: isEnable ? MatchAppColors.fillColors.fillSecondary : MatchAppColors.fillColors.fillDisabled,
         borderRadius: BorderRadius.circular(4.0),
       ),
       child: InkWell(
@@ -58,12 +55,8 @@ class MicroSecondaryButton extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize:
-                widthOption == ButtonWidthOption.WRAP ? MainAxisSize.min : MainAxisSize.max,
-            children:
-                assetPosition == ButtonIconPosition.LEFT
-                    ? _buildLeftIconLayout()
-                    : _buildRightIconLayout(),
+            mainAxisSize: widthOption == ButtonWidthOption.WRAP ? MainAxisSize.min : MainAxisSize.max,
+            children: assetPosition == ButtonIconPosition.LEFT ? _buildLeftIconLayout() : _buildRightIconLayout(),
           ),
         ),
       ),
@@ -93,17 +86,11 @@ class MicroSecondaryButton extends StatelessWidget {
   // 아이콘 왼쪽
   List<Widget> _buildLeftIconLayout() {
     return [
-      if (assetName != null) ...[
-        SvgPicture.asset(assetName!, width: 16, height: 16),
-        const SizedBox(width: 4.0),
-      ],
+      if (assetName != null) ...[SvgPicture.asset(assetName!, width: 16, height: 16), const SizedBox(width: 4.0)],
       Text(
         title,
         style: MatchTextStyles.Button2.copyWith(
-          color:
-              isEnable
-                  ? MatchAppColors.textColors.textDefault
-                  : MatchAppColors.textColors.textDisabled,
+          color: isEnable ? MatchAppColors.textColors.textDefault : MatchAppColors.textColors.textDisabled,
         ),
       ),
     ];
@@ -115,16 +102,10 @@ class MicroSecondaryButton extends StatelessWidget {
       Text(
         title,
         style: MatchTextStyles.Button2.copyWith(
-          color:
-              isEnable
-                  ? MatchAppColors.textColors.textDefault
-                  : MatchAppColors.textColors.textDisabled,
+          color: isEnable ? MatchAppColors.textColors.textDefault : MatchAppColors.textColors.textDisabled,
         ),
       ),
-      if (assetName != null) ...[
-        const SizedBox(width: 4.0),
-        SvgPicture.asset(assetName!, width: 16, height: 16),
-      ],
+      if (assetName != null) ...[const SizedBox(width: 4.0), SvgPicture.asset(assetName!, width: 16, height: 16)],
     ];
   }
 

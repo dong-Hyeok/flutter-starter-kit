@@ -11,7 +11,7 @@ class MediumChipList extends StatelessWidget {
 
   const MediumChipList({
     required this.titles,
-    this.assetName = IconPath.close,
+    this.assetName = IconPath.iconClose,
     this.assetPosition = ChipIconPosition.RIGHT,
     this.onIconTap,
     super.key,

@@ -66,9 +66,7 @@ class MatchDefaultModal extends StatelessWidget {
       child: Dialog(
         insetPadding: EdgeInsets.zero,
         backgroundColor: MatchAppColors.fillColors.fillDefault_D,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12.0),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
         child: Container(
           width: MediaQuery.of(context).size.width * 1,
           padding: const EdgeInsets.only(top: 24.0, left: 16.0, right: 16.0, bottom: 16.0),
@@ -96,9 +94,7 @@ class MatchDefaultModal extends StatelessWidget {
           padding: const EdgeInsets.only(top: 8.0),
           child: Text(
             body!,
-            style: MatchTextStyles.Body1_Regular.copyWith(
-              color: MatchAppColors.textColors.textDefault,
-            ),
+            style: MatchTextStyles.Body1_Regular.copyWith(color: MatchAppColors.textColors.textDefault),
           ),
         );
   }
@@ -117,11 +113,7 @@ class MatchDefaultModal extends StatelessWidget {
           ),
         if (leftButtonTitle != null) const SizedBox(width: 8.0),
         Expanded(
-          child: LargePrimaryButton(
-            title: rightButtonTitle,
-            onTap: onClickRight,
-            widthOption: ButtonWidthOption.FULL,
-          ),
+          child: LargePrimaryButton(title: rightButtonTitle, onTap: onClickRight, widthOption: ButtonWidthOption.FULL),
         ),
       ],
     );

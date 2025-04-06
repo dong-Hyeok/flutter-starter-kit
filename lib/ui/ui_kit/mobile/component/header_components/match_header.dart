@@ -36,13 +36,7 @@ class MatchAppbar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: _appBarStyle.backgroundColor, // AppBar 배경색
       title: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          _backPressWidget(),
-          const SizedBox(width: 4.0),
-          _titleWidget(),
-          const Spacer(),
-          _rightIconWidget(),
-        ],
+        children: [_backPressWidget(), const SizedBox(width: 4.0), _titleWidget(), const Spacer(), _rightIconWidget()],
       ),
     );
   }
@@ -50,16 +44,14 @@ class MatchAppbar extends StatelessWidget implements PreferredSizeWidget {
   Widget _backPressWidget() {
     return isBackPress
         ? InkWell(
-          onTap: () => Get.back(), child: SvgPicture.asset(
-            IconPath.back, colorFilter: _appBarStyle.iconColor))
+          onTap: () => Get.back(),
+          child: SvgPicture.asset(IconPath.iconBack, colorFilter: _appBarStyle.iconColor),
+        )
         : const SizedBox.shrink();
   }
 
   Text _titleWidget() {
-    return Text(
-      title,
-      style: MatchTextStyles.Title.copyWith(color: _appBarStyle.textColor),
-    );
+    return Text(title, style: MatchTextStyles.Title.copyWith(color: _appBarStyle.textColor));
   }
 
   /// 배경 상태 상관 없이 아이콘은 호출부에서 컨트롤 하는 것으로 결정....
@@ -67,7 +59,9 @@ class MatchAppbar extends StatelessWidget implements PreferredSizeWidget {
   Widget _rightIconWidget() {
     return rightIcon != null
         ? InkWell(
-          onTap: onRightIconPressed ?? () {}, child: SvgPicture.asset(rightIcon!, colorFilter: _appBarStyle.iconColor))
+          onTap: onRightIconPressed ?? () {},
+          child: SvgPicture.asset(rightIcon!, colorFilter: _appBarStyle.iconColor),
+        )
         : const SizedBox.shrink();
   }
 }

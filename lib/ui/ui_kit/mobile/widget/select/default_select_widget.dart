@@ -75,8 +75,7 @@ class DefaultSelectWidgetState extends State<DefaultSelectWidget> {
     super.didUpdateWidget(oldWidget);
 
     // initText가 바뀌었는지 체크하고 텍스트 업데이트
-    if (widget.initText != oldWidget.initText &&
-        widget.initText != widget.controller.text) {
+    if (widget.initText != oldWidget.initText && widget.initText != widget.controller.text) {
       widget.controller.text = widget.initText ?? '';
       _updateHelperAndErrorText(widget.controller.text); // 에러 상태도 함께 갱신
     }
@@ -113,15 +112,9 @@ class DefaultSelectWidgetState extends State<DefaultSelectWidget> {
         // (하단) 상태 메시지
         const SizedBox(height: 4.0),
         if (_errorText != null)
-          SupportingMessage(
-            text: _errorText!,
-            messageStyles: MatchMessageStyles.ERROR,
-          )
+          SupportingMessage(text: _errorText!, messageStyles: MatchMessageStyles.ERROR)
         else if (widget.helperText != null)
-          SupportingMessage(
-            text: widget.helperText!,
-            messageStyles: MatchMessageStyles.HELPER,
-          ),
+          SupportingMessage(text: widget.helperText!, messageStyles: MatchMessageStyles.HELPER),
       ],
     );
   }
@@ -147,10 +140,7 @@ class DefaultSelectWidgetState extends State<DefaultSelectWidget> {
       readOnly: true,
       onTap: widget.onTap,
       style: MatchTextStyles.Body1_Regular.copyWith(
-        color:
-            widget.isEnable
-                ? MatchAppColors.textColors.textDefault
-                : MatchAppColors.textColors.textDisabled,
+        color: widget.isEnable ? MatchAppColors.textColors.textDefault : MatchAppColors.textColors.textDisabled,
       ),
       decoration: _defaultInputDecoration(),
       onChanged: (value) {
@@ -175,10 +165,7 @@ class DefaultSelectWidgetState extends State<DefaultSelectWidget> {
     var outlineInputBorderDefault = OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
       borderSide: BorderSide(
-        color:
-            _errorText == null
-                ? MatchAppColors.strokeColors.strokeDefault
-                : MatchAppColors.strokeColors.strokeError,
+        color: _errorText == null ? MatchAppColors.strokeColors.strokeDefault : MatchAppColors.strokeColors.strokeError,
         width: 1,
       ),
     );
@@ -186,10 +173,7 @@ class DefaultSelectWidgetState extends State<DefaultSelectWidget> {
     var outlineInputBorderFocus = OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
       borderSide: BorderSide(
-        color:
-            _errorText == null
-                ? MatchAppColors.strokeColors.strokeStrong
-                : MatchAppColors.strokeColors.strokeError,
+        color: _errorText == null ? MatchAppColors.strokeColors.strokeStrong : MatchAppColors.strokeColors.strokeError,
         width: 1,
       ),
     );
@@ -197,22 +181,13 @@ class DefaultSelectWidgetState extends State<DefaultSelectWidget> {
     return InputDecoration(
       contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 14),
       filled: true,
-      fillColor:
-          widget.isEnable
-              ? MatchAppColors.fillColors.fillDefault
-              : MatchAppColors.fillColors.fillDisabled,
+      fillColor: widget.isEnable ? MatchAppColors.fillColors.fillDefault : MatchAppColors.fillColors.fillDisabled,
       hintText: widget.hintText ?? '',
       hintStyle: MatchTextStyles.Body1_Regular.copyWith(
-        color:
-            widget.isEnable
-                ? MatchAppColors.textColors.textPlaceholder
-                : MatchAppColors.textColors.textDisabled,
+        color: widget.isEnable ? MatchAppColors.textColors.textPlaceholder : MatchAppColors.textColors.textDisabled,
       ),
       border: outlineInputBorderDefault, // 기본 테두리 스타일
-      focusedBorder:
-          widget.onTap == null
-              ? outlineInputBorderFocus
-              : outlineInputBorderDefault, // 포커스 상태 테두리
+      focusedBorder: widget.onTap == null ? outlineInputBorderFocus : outlineInputBorderDefault, // 포커스 상태 테두리
       enabledBorder: outlineInputBorderDefault, // 활성화 상태 테두리
       disabledBorder: outlineInputBorderDefault, // 비활성화 상태 테두리
       prefixIcon: preffixIconWidget(),
@@ -235,11 +210,7 @@ class DefaultSelectWidgetState extends State<DefaultSelectWidget> {
             padding: const EdgeInsets.only(right: 6.0),
             child: GestureDetector(
               onTap: widget.onClickPreffixIcon,
-              child: SvgPicture.asset(
-                widget.preffixIconAsset!,
-                height: 24,
-                width: 24,
-              ),
+              child: SvgPicture.asset(widget.preffixIconAsset!, height: 24, width: 24),
             ),
           ),
       ],
@@ -250,10 +221,7 @@ class DefaultSelectWidgetState extends State<DefaultSelectWidget> {
   Widget suffixIconWidget() {
     return Row(
       mainAxisSize: MainAxisSize.min,
-      children: [
-        SvgPicture.asset(IconPath.dropArrow, height: 24, width: 24),
-        const SizedBox(width: 12.0),
-      ],
+      children: [SvgPicture.asset(IconPath.iconDropArrow, height: 24, width: 24), const SizedBox(width: 12.0)],
     );
   }
 }

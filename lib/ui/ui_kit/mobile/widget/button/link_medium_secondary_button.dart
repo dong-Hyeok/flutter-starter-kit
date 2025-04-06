@@ -69,12 +69,9 @@ class _LinkMediumSecondaryButtonState extends State<LinkMediumSecondaryButton> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize:
-                widget.widthOption == ButtonWidthOption.WRAP ? MainAxisSize.min : MainAxisSize.max,
+            mainAxisSize: widget.widthOption == ButtonWidthOption.WRAP ? MainAxisSize.min : MainAxisSize.max,
             children:
-                widget.assetPosition == ButtonIconPosition.LEFT
-                    ? _buildLeftIconLayout()
-                    : _buildRightIconLayout(),
+                widget.assetPosition == ButtonIconPosition.LEFT ? _buildLeftIconLayout() : _buildRightIconLayout(),
           ),
         ),
       ),
@@ -91,10 +88,7 @@ class _LinkMediumSecondaryButtonState extends State<LinkMediumSecondaryButton> {
       Text(
         widget.title,
         style: MatchTextStyles.Link1.copyWith(
-          color:
-              _isPressed
-                  ? MatchAppColors.textColors.textSoft.withOpacity(0.7)
-                  : MatchAppColors.textColors.textSoft,
+          color: _isPressed ? MatchAppColors.textColors.textSoft.withOpacity(0.7) : MatchAppColors.textColors.textSoft,
         ),
       ),
     ];
@@ -106,10 +100,7 @@ class _LinkMediumSecondaryButtonState extends State<LinkMediumSecondaryButton> {
       Text(
         widget.title,
         style: MatchTextStyles.Link1.copyWith(
-          color:
-              _isPressed
-                  ? MatchAppColors.textColors.textSoft.withOpacity(0.24)
-                  : MatchAppColors.textColors.textSoft,
+          color: _isPressed ? MatchAppColors.textColors.textSoft.withOpacity(0.24) : MatchAppColors.textColors.textSoft,
         ),
       ),
       if (widget.assetName != null) ...[

@@ -7,12 +7,7 @@ Widget topBorderDivider({
   double borderWidth = 1,
 }) {
   return Container(
-    decoration: BoxDecoration(
-      color: color,
-      border: Border(
-        top: BorderSide(color: topBorderColor, width: borderWidth),
-      ),
-    ),
+    decoration: BoxDecoration(color: color, border: Border(top: BorderSide(color: topBorderColor, width: borderWidth))),
     height: height,
     width: double.infinity,
   );

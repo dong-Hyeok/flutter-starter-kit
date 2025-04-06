@@ -44,12 +44,7 @@ class CheckBoxListState<T> extends State<CheckBoxList<T>> {
   }
 
   final _boxDecoration = BoxDecoration(
-    border: Border(
-      bottom: BorderSide(
-        color: MatchAppColors.strokeColors.strokeSoft,
-        width: 1.0,
-      ),
-    ),
+    border: Border(bottom: BorderSide(color: MatchAppColors.strokeColors.strokeSoft, width: 1.0)),
   );
 
   @override

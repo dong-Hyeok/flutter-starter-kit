@@ -16,12 +16,7 @@ class CustomCheckBox extends StatelessWidget {
   final String value;
   final CheckBoxType type;
 
-  const CustomCheckBox({
-    super.key,
-    required this.isCheck,
-    required this.value,
-    required this.type,
-  });
+  const CustomCheckBox({super.key, required this.isCheck, required this.value, required this.type});
 
   @override
   Widget build(BuildContext context) {
@@ -43,12 +38,6 @@ class CustomCheckBox extends StatelessWidget {
         break;
     }
 
-    return Row(
-      children: [
-        SvgPicture.asset(icon),
-        const SizedBox(width: 6.0),
-        Text(value, style: textStyle),
-      ],
-    );
+    return Row(children: [SvgPicture.asset(icon), const SizedBox(width: 6.0), Text(value, style: textStyle)]);
   }
 }

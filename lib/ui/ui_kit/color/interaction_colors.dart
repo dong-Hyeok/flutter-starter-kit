@@ -29,13 +29,10 @@ class InteractionColors extends ThemeExtension<InteractionColors> {
     return InteractionColors(
       interactionDimmed: interactionDimmed ?? this.interactionDimmed,
       interactionDimmed_D: interactionDimmed_D ?? this.interactionDimmed_D,
-      interactionTransparentDark:
-          interactionTransparentDark ?? this.interactionTransparentDark,
+      interactionTransparentDark: interactionTransparentDark ?? this.interactionTransparentDark,
       interactionPressed: interactionPressed ?? this.interactionPressed,
-      interactionPressedInverse:
-          interactionPressedInverse ?? this.interactionPressedInverse,
-      interactionLinkPressedInverse:
-          interactionLinkPressedInverse ?? this.interactionLinkPressedInverse,
+      interactionPressedInverse: interactionPressedInverse ?? this.interactionPressedInverse,
+      interactionLinkPressedInverse: interactionLinkPressedInverse ?? this.interactionLinkPressedInverse,
     );
   }
 
@@ -43,30 +40,12 @@ class InteractionColors extends ThemeExtension<InteractionColors> {
   InteractionColors lerp(ThemeExtension<InteractionColors>? other, double t) {
     if (other is! InteractionColors) return this;
     return InteractionColors(
-      interactionDimmed:
-          Color.lerp(interactionDimmed, other.interactionDimmed, t)!,
-      interactionDimmed_D:
-          Color.lerp(interactionDimmed_D, other.interactionDimmed_D, t)!,
-      interactionTransparentDark:
-          Color.lerp(
-            interactionTransparentDark,
-            other.interactionTransparentDark,
-            t,
-          )!,
-      interactionPressed:
-          Color.lerp(interactionPressed, other.interactionPressed, t)!,
-      interactionPressedInverse:
-          Color.lerp(
-            interactionPressedInverse,
-            other.interactionPressedInverse,
-            t,
-          )!,
-      interactionLinkPressedInverse:
-          Color.lerp(
-            interactionLinkPressedInverse,
-            other.interactionLinkPressedInverse,
-            t,
-          )!,
+      interactionDimmed: Color.lerp(interactionDimmed, other.interactionDimmed, t)!,
+      interactionDimmed_D: Color.lerp(interactionDimmed_D, other.interactionDimmed_D, t)!,
+      interactionTransparentDark: Color.lerp(interactionTransparentDark, other.interactionTransparentDark, t)!,
+      interactionPressed: Color.lerp(interactionPressed, other.interactionPressed, t)!,
+      interactionPressedInverse: Color.lerp(interactionPressedInverse, other.interactionPressedInverse, t)!,
+      interactionLinkPressedInverse: Color.lerp(interactionLinkPressedInverse, other.interactionLinkPressedInverse, t)!,
     );
   }
 }

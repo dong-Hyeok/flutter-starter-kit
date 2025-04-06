@@ -8,12 +8,7 @@ class YearMonthPickerView extends StatelessWidget {
   final DateTime endDate;
   final Function(DateTime selectedDate) onApply;
 
-  YearMonthPickerView({
-    super.key,
-    required this.startDate,
-    required this.endDate,
-    required this.onApply,
-  });
+  YearMonthPickerView({super.key, required this.startDate, required this.endDate, required this.onApply});
 
   final Rx<DateTime> selectedDate = DateTime.now().obs;
 
@@ -27,16 +22,10 @@ class YearMonthPickerView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 8.0, bottom: 4.0),
-            child: bottomSheetDragHandle(),
-          ),
+          Padding(padding: const EdgeInsets.only(top: 8.0, bottom: 4.0), child: bottomSheetDragHandle()),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
-            child: Text(
-              '월 선택',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, height: 1.22),
-            ),
+            child: Text('월 선택', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, height: 1.22)),
           ),
           Obx(
             () => Padding(

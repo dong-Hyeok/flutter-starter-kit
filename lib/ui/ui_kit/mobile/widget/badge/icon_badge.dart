@@ -27,20 +27,14 @@ class IconBadge extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 24.0,
-      decoration: BoxDecoration(
-        color: backgroundColor,
-        borderRadius: BorderRadius.circular(12.0),
-      ),
+      decoration: BoxDecoration(color: backgroundColor, borderRadius: BorderRadius.circular(12.0)),
       padding: const EdgeInsets.only(left: 4.0, right: 8.0),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
           SvgPicture.asset(icon, height: 16.0, width: 16.0),
           const SizedBox(width: 2.0),
-          Text(
-            content,
-            style: MatchTextStyles.Label2.copyWith(color: textColor),
-          ),
+          Text(content, style: MatchTextStyles.Label2.copyWith(color: textColor)),
         ],
       ),
     );

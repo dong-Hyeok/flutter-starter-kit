@@ -69,12 +69,9 @@ class _LinkMediumPrimaryButtonState extends State<LinkMediumPrimaryButton> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize:
-                widget.widthOption == ButtonWidthOption.WRAP ? MainAxisSize.min : MainAxisSize.max,
+            mainAxisSize: widget.widthOption == ButtonWidthOption.WRAP ? MainAxisSize.min : MainAxisSize.max,
             children:
-                widget.assetPosition == ButtonIconPosition.LEFT
-                    ? _buildLeftIconLayout()
-                    : _buildRightIconLayout(),
+                widget.assetPosition == ButtonIconPosition.LEFT ? _buildLeftIconLayout() : _buildRightIconLayout(),
           ),
         ),
       ),

@@ -61,9 +61,7 @@ class MatchCustomModal extends StatelessWidget {
       child: Dialog(
         insetPadding: EdgeInsets.zero,
         backgroundColor: MatchAppColors.fillColors.fillDefault_D,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12.0),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
         child: Container(
           width: MediaQuery.of(context).size.width * 1,
           padding: const EdgeInsets.only(top: 24.0, left: 16.0, right: 16.0, bottom: 16.0),
@@ -72,10 +70,7 @@ class MatchCustomModal extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 8.0, right: 8.0),
-                child: bodyWidget,
-              ),
+              Padding(padding: const EdgeInsets.only(left: 8.0, right: 8.0), child: bodyWidget),
               _actionWidget(),
             ],
           ),
@@ -98,11 +93,7 @@ class MatchCustomModal extends StatelessWidget {
           ),
         if (leftButtonTitle != null) const SizedBox(width: 8.0),
         Expanded(
-          child: LargePrimaryButton(
-            title: rightButtonTitle,
-            onTap: onClickRight,
-            widthOption: ButtonWidthOption.FULL,
-          ),
+          child: LargePrimaryButton(title: rightButtonTitle, onTap: onClickRight, widthOption: ButtonWidthOption.FULL),
         ),
       ],
     );

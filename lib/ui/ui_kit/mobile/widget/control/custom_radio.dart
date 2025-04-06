@@ -14,12 +14,7 @@ class CustomRadio extends StatelessWidget {
   final String value;
   final String? imgUrl;
 
-  const CustomRadio({
-    super.key,
-    required this.isCheck,
-    required this.value,
-    this.imgUrl,
-  });
+  const CustomRadio({super.key, required this.isCheck, required this.value, this.imgUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -34,11 +29,6 @@ class CustomRadio extends StatelessWidget {
   }
 
   Widget radioButtonImage() {
-    return Row(
-      children: [
-        Image.network(imgUrl!, width: 24, height: 24),
-        const SizedBox(width: 4.0),
-      ],
-    );
+    return Row(children: [Image.network(imgUrl!, width: 24, height: 24), const SizedBox(width: 4.0)]);
   }
 }

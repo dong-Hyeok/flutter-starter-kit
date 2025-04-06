@@ -9,11 +9,7 @@ class MatchMessageStyleConfig {
   final Color iconColor;
   final Color textColor;
 
-  MatchMessageStyleConfig({
-    required this.icon,
-    required this.iconColor,
-    required this.textColor,
-  });
+  MatchMessageStyleConfig({required this.icon, required this.iconColor, required this.textColor});
 
   factory MatchMessageStyleConfig.from(MatchMessageStyles style) {
     switch (style) {
@@ -25,7 +21,7 @@ class MatchMessageStyleConfig {
         );
       case MatchMessageStyles.HELPER:
         return MatchMessageStyleConfig(
-          icon: IconPath.circleWarning,
+          icon: IconPath.iconCircleWarning,
           iconColor: MatchAppColors.iconColors.iconSoft,
           textColor: MatchAppColors.textColors.textHelper,
         );
@@ -37,7 +33,7 @@ class MatchMessageStyleConfig {
         );
       case MatchMessageStyles.TOOLTIP:
         return MatchMessageStyleConfig(
-          icon: IconPath.circleQuestion,
+          icon: IconPath.iconCircleQuestion,
           iconColor: MatchAppColors.iconColors.iconSoft,
           textColor: MatchAppColors.textColors.textHelper,
         );
