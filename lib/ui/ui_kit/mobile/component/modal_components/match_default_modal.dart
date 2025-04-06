@@ -75,7 +75,10 @@ class MatchDefaultModal extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(title, style: MatchTextStyles.Title.copyWith(color: MatchAppColors.textColors.textStrong)),
+              Text(
+                title,
+                style: MatchTextStyles.Title.copyWith(color: MatchAppColors.textColors.textStrong),
+              ),
               _bodyWidget(),
               const SizedBox(height: 32),
               _actionWidget(),
@@ -94,7 +97,9 @@ class MatchDefaultModal extends StatelessWidget {
           padding: const EdgeInsets.only(top: 8.0),
           child: Text(
             body!,
-            style: MatchTextStyles.Body1_Regular.copyWith(color: MatchAppColors.textColors.textDefault),
+            style: MatchTextStyles.Body1_Regular.copyWith(
+              color: MatchAppColors.textColors.textDefault,
+            ),
           ),
         );
   }
@@ -113,7 +118,11 @@ class MatchDefaultModal extends StatelessWidget {
           ),
         if (leftButtonTitle != null) const SizedBox(width: 8.0),
         Expanded(
-          child: LargePrimaryButton(title: rightButtonTitle, onTap: onClickRight, widthOption: ButtonWidthOption.FULL),
+          child: LargePrimaryButton(
+            title: rightButtonTitle,
+            onTap: onClickRight,
+            widthOption: ButtonWidthOption.FULL,
+          ),
         ),
       ],
     );

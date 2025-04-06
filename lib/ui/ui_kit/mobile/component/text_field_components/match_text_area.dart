@@ -148,7 +148,9 @@ class MatchTextAreaState extends State<MatchTextArea> {
           obscureText: isObscure,
           textAlignVertical: TextAlignVertical.top,
           inputFormatters: widget.textInputFormatterList,
-          style: MatchTextStyles.Body1_Regular.copyWith(color: MatchAppColors.textColors.textDefault),
+          style: MatchTextStyles.Body1_Regular.copyWith(
+            color: MatchAppColors.textColors.textDefault,
+          ),
           decoration: _defaultInputDecoration(),
           onChanged: (value) {
             setState(() {
@@ -173,11 +175,15 @@ class MatchTextAreaState extends State<MatchTextArea> {
             children: [
               Text(
                 '${widget.controller.text.length}',
-                style: MatchTextStyles.Body3_Regular.copyWith(color: MatchAppColors.textColors.textSoft),
+                style: MatchTextStyles.Body3_Regular.copyWith(
+                  color: MatchAppColors.textColors.textSoft,
+                ),
               ),
               Text(
                 '/${widget.maxLength}',
-                style: MatchTextStyles.Body3_Medium.copyWith(color: MatchAppColors.textColors.textDefault),
+                style: MatchTextStyles.Body3_Medium.copyWith(
+                  color: MatchAppColors.textColors.textDefault,
+                ),
               ),
             ],
           ),
@@ -191,7 +197,10 @@ class MatchTextAreaState extends State<MatchTextArea> {
     var outlineInputBorderDefault = OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
       borderSide: BorderSide(
-        color: _errorText == null ? MatchAppColors.strokeColors.strokeDefault : MatchAppColors.strokeColors.strokeError,
+        color:
+            _errorText == null
+                ? MatchAppColors.strokeColors.strokeDefault
+                : MatchAppColors.strokeColors.strokeError,
         width: 1,
       ),
     );
@@ -199,7 +208,10 @@ class MatchTextAreaState extends State<MatchTextArea> {
     var outlineInputBorderFocus = OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
       borderSide: BorderSide(
-        color: _errorText == null ? MatchAppColors.strokeColors.strokeFocus : MatchAppColors.strokeColors.strokeError,
+        color:
+            _errorText == null
+                ? MatchAppColors.strokeColors.strokeFocus
+                : MatchAppColors.strokeColors.strokeError,
         width: 1,
       ),
     );
@@ -207,13 +219,20 @@ class MatchTextAreaState extends State<MatchTextArea> {
     return InputDecoration(
       contentPadding: const EdgeInsets.only(left: 12, right: 12, top: 8, bottom: 20),
       filled: true,
-      fillColor: widget.isEnable ? MatchAppColors.fillColors.fillDefault : MatchAppColors.fillColors.fillDisabled,
+      fillColor:
+          widget.isEnable
+              ? MatchAppColors.fillColors.fillDefault
+              : MatchAppColors.fillColors.fillDisabled,
       hintText: widget.hintText ?? '',
       hintStyle: MatchTextStyles.Body1_Regular.copyWith(
-        color: widget.isEnable ? MatchAppColors.textColors.textPlaceholder : MatchAppColors.textColors.textDisabled,
+        color:
+            widget.isEnable
+                ? MatchAppColors.textColors.textPlaceholder
+                : MatchAppColors.textColors.textDisabled,
       ),
       border: outlineInputBorderDefault, // 기본 테두리 스타일
-      focusedBorder: widget.onTap == null ? outlineInputBorderFocus : outlineInputBorderDefault, // 포커스 상태 테두리
+      focusedBorder:
+          widget.onTap == null ? outlineInputBorderFocus : outlineInputBorderDefault, // 포커스 상태 테두리
       enabledBorder: outlineInputBorderDefault, // 활성화 상태 테두리
       disabledBorder: outlineInputBorderDefault, // 비활성화 상태 테두리
       counterText: '', // 텍스트 카운터 비활성

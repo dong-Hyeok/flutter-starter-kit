@@ -20,10 +20,15 @@ class MatchHeaderStyles {
       systemOverlayStyle: isBackground ? SystemUiOverlayStyle.light : SystemUiOverlayStyle.dark,
       backgroundColor: isBackground ? MatchAppColors.fillColors.fillPrimary_D : Colors.transparent,
       iconColor: ColorFilter.mode(
-        isBackground ? MatchAppColors.iconColors.iconInverse_D : MatchAppColors.iconColors.iconDefault,
+        isBackground
+            ? MatchAppColors.iconColors.iconInverse_D
+            : MatchAppColors.iconColors.iconDefault,
         BlendMode.srcIn,
       ),
-      textColor: isBackground ? MatchAppColors.textColors.textInverse_D : MatchAppColors.textColors.textStrong,
+      textColor:
+          isBackground
+              ? MatchAppColors.textColors.textInverse_D
+              : MatchAppColors.textColors.textStrong,
     );
   }
 }

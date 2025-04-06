@@ -7,7 +7,10 @@ Widget bottomSheetDragHandle() {
       child: Container(
         width: 40,
         height: 6,
-        decoration: BoxDecoration(color: const Color(0xFFEDEDED), borderRadius: BorderRadius.circular(3)),
+        decoration: BoxDecoration(
+          color: const Color(0xFFEDEDED),
+          borderRadius: BorderRadius.circular(3),
+        ),
       ),
     ),
   );

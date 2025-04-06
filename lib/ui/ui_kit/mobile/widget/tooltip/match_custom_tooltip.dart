@@ -95,7 +95,8 @@ class _MatchCustomTooltipState extends State<MatchCustomTooltip> {
 
     /// 툴팁 바인딩시 툴팁 넓이 얻기
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      final RenderBox tooltipRenderBox = _tooltipKey.currentContext?.findRenderObject() as RenderBox;
+      final RenderBox tooltipRenderBox =
+          _tooltipKey.currentContext?.findRenderObject() as RenderBox;
       final tooltipWidth = tooltipRenderBox.size.width;
 
       _overlayEntry?.remove();
@@ -105,7 +106,9 @@ class _MatchCustomTooltipState extends State<MatchCustomTooltip> {
           return Stack(
             children: [
               // 배경을 터치하면 툴팁 닫힘
-              Positioned.fill(child: GestureDetector(behavior: HitTestBehavior.opaque, onTap: _hideTooltip)),
+              Positioned.fill(
+                child: GestureDetector(behavior: HitTestBehavior.opaque, onTap: _hideTooltip),
+              ),
               // 아이콘 바로 아래에 툴팁 배치
               Positioned(
                 left: targetPosition.dx - (tooltipWidth / 2) + (targetSize.width / 2), // 아이콘의 X 좌표
@@ -179,7 +182,9 @@ class _MatchCustomTooltipState extends State<MatchCustomTooltip> {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             DefaultTextStyle(
-              style: MatchTextStyles.Body3_Regular.copyWith(color: MatchAppColors.textColors.textInverse_D),
+              style: MatchTextStyles.Body3_Regular.copyWith(
+                color: MatchAppColors.textColors.textInverse_D,
+              ),
               child: Text(widget.tooltipText),
             ),
             if (widget.tooltipIcon != null) ...{SvgPicture.asset(widget.tooltipIcon!)},

@@ -66,7 +66,10 @@ class RadioButtonListState<T> extends State<RadioButtonList<T>> {
           decoration: widget.isSepareated ? _boxDecoration : null,
           child: GestureDetector(
             onTap: () => _toggleRadio(index),
-            child: CustomRadio(isCheck: selectedIndex == index, value: widget.valueBuilder(widget.contentList[index])),
+            child: CustomRadio(
+              isCheck: selectedIndex == index,
+              value: widget.valueBuilder(widget.contentList[index]),
+            ),
           ),
         );
       },

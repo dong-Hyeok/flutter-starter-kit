@@ -9,5 +9,9 @@ enum DefaultBadgeStyle {
   final double paddingHorizontal;
   final TextStyle textStyle;
 
-  const DefaultBadgeStyle({required this.height, required this.paddingHorizontal, required this.textStyle});
+  const DefaultBadgeStyle({
+    required this.height,
+    required this.paddingHorizontal,
+    required this.textStyle,
+  });
 }

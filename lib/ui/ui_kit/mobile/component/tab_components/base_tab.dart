@@ -48,7 +48,11 @@ class _BaseTabState extends State<BaseTab> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     // 탭, 페이지 컨트롤러 초기화
-    _tabController = TabController(length: widget.tabs.length, vsync: this, initialIndex: widget.initialPageIndex);
+    _tabController = TabController(
+      length: widget.tabs.length,
+      vsync: this,
+      initialIndex: widget.initialPageIndex,
+    );
 
     // 탭 리스너 등록
     _tabController.addListener(() {

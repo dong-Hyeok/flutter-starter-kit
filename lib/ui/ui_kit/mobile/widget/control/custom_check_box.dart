@@ -38,6 +38,8 @@ class CustomCheckBox extends StatelessWidget {
         break;
     }
 
-    return Row(children: [SvgPicture.asset(icon), const SizedBox(width: 6.0), Text(value, style: textStyle)]);
+    return Row(
+      children: [SvgPicture.asset(icon), const SizedBox(width: 6.0), Text(value, style: textStyle)],
+    );
   }
 }

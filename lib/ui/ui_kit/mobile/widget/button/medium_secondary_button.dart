@@ -41,7 +41,10 @@ class MediumSecondaryButton extends StatelessWidget {
     return Ink(
       height: 40.0,
       decoration: BoxDecoration(
-        color: isEnable ? MatchAppColors.fillColors.fillSecondary : MatchAppColors.fillColors.fillDisabled,
+        color:
+            isEnable
+                ? MatchAppColors.fillColors.fillSecondary
+                : MatchAppColors.fillColors.fillDisabled,
         borderRadius: BorderRadius.circular(6.0),
       ),
       child: InkWell(
@@ -56,7 +59,10 @@ class MediumSecondaryButton extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
-            children: assetPosition == ButtonIconPosition.LEFT ? _buildLeftIconLayout() : _buildRightIconLayout(),
+            children:
+                assetPosition == ButtonIconPosition.LEFT
+                    ? _buildLeftIconLayout()
+                    : _buildRightIconLayout(),
           ),
         ),
       ),
@@ -86,11 +92,17 @@ class MediumSecondaryButton extends StatelessWidget {
   // 아이콘 왼쪽
   List<Widget> _buildLeftIconLayout() {
     return [
-      if (assetName != null) ...[SvgPicture.asset(assetName!, width: 24, height: 24), const SizedBox(width: 4.0)],
+      if (assetName != null) ...[
+        SvgPicture.asset(assetName!, width: 24, height: 24),
+        const SizedBox(width: 4.0),
+      ],
       Text(
         title,
         style: MatchTextStyles.Button1.copyWith(
-          color: isEnable ? MatchAppColors.textColors.textDefault : MatchAppColors.textColors.textDisabled,
+          color:
+              isEnable
+                  ? MatchAppColors.textColors.textDefault
+                  : MatchAppColors.textColors.textDisabled,
         ),
       ),
     ];
@@ -102,10 +114,16 @@ class MediumSecondaryButton extends StatelessWidget {
       Text(
         title,
         style: MatchTextStyles.Button1.copyWith(
-          color: isEnable ? MatchAppColors.textColors.textDefault : MatchAppColors.textColors.textDisabled,
+          color:
+              isEnable
+                  ? MatchAppColors.textColors.textDefault
+                  : MatchAppColors.textColors.textDisabled,
         ),
       ),
-      if (assetName != null) ...[const SizedBox(width: 4.0), SvgPicture.asset(assetName!, width: 24, height: 24)],
+      if (assetName != null) ...[
+        const SizedBox(width: 4.0),
+        SvgPicture.asset(assetName!, width: 24, height: 24),
+      ],
     ];
   }
 

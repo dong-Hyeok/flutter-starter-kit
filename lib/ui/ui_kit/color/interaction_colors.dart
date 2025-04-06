@@ -32,7 +32,8 @@ class InteractionColors extends ThemeExtension<InteractionColors> {
       interactionTransparentDark: interactionTransparentDark ?? this.interactionTransparentDark,
       interactionPressed: interactionPressed ?? this.interactionPressed,
       interactionPressedInverse: interactionPressedInverse ?? this.interactionPressedInverse,
-      interactionLinkPressedInverse: interactionLinkPressedInverse ?? this.interactionLinkPressedInverse,
+      interactionLinkPressedInverse:
+          interactionLinkPressedInverse ?? this.interactionLinkPressedInverse,
     );
   }
 
@@ -42,10 +43,13 @@ class InteractionColors extends ThemeExtension<InteractionColors> {
     return InteractionColors(
       interactionDimmed: Color.lerp(interactionDimmed, other.interactionDimmed, t)!,
       interactionDimmed_D: Color.lerp(interactionDimmed_D, other.interactionDimmed_D, t)!,
-      interactionTransparentDark: Color.lerp(interactionTransparentDark, other.interactionTransparentDark, t)!,
+      interactionTransparentDark:
+          Color.lerp(interactionTransparentDark, other.interactionTransparentDark, t)!,
       interactionPressed: Color.lerp(interactionPressed, other.interactionPressed, t)!,
-      interactionPressedInverse: Color.lerp(interactionPressedInverse, other.interactionPressedInverse, t)!,
-      interactionLinkPressedInverse: Color.lerp(interactionLinkPressedInverse, other.interactionLinkPressedInverse, t)!,
+      interactionPressedInverse:
+          Color.lerp(interactionPressedInverse, other.interactionPressedInverse, t)!,
+      interactionLinkPressedInverse:
+          Color.lerp(interactionLinkPressedInverse, other.interactionLinkPressedInverse, t)!,
     );
   }
 }

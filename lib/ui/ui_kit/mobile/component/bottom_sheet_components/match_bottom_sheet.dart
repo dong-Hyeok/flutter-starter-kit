@@ -84,7 +84,10 @@ class MatchBottomSheet extends StatelessWidget {
             children: [
               _dragHandle(),
               _titleWidget(),
-              Padding(padding: EdgeInsets.symmetric(horizontal: isHorizontalPadding ? 16.0 : 0), child: bodyWidget),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: isHorizontalPadding ? 16.0 : 0),
+                child: bodyWidget,
+              ),
             ],
           ),
           // 하단
@@ -107,7 +110,10 @@ class MatchBottomSheet extends StatelessWidget {
         child: Row(
           children: [
             // 타이틀
-            Text(title!, style: MatchTextStyles.Title.copyWith(color: MatchAppColors.textColors.textStrong)),
+            Text(
+              title!,
+              style: MatchTextStyles.Title.copyWith(color: MatchAppColors.textColors.textStrong),
+            ),
             // 타이틀 아이콘
             if (onClickTitleIcon != null) ...{
               const SizedBox(width: 2),
@@ -141,7 +147,11 @@ class MatchBottomSheet extends StatelessWidget {
   }
 
   Widget _androidBottomHandle() {
-    return Container(width: double.infinity, height: 20, padding: const EdgeInsets.only(top: 27.0, bottom: 8.0));
+    return Container(
+      width: double.infinity,
+      height: 20,
+      padding: const EdgeInsets.only(top: 27.0, bottom: 8.0),
+    );
   }
 
   Widget _iOSBottomHandle() {

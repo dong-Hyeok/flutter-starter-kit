@@ -16,7 +16,10 @@ class AppTheme {
     primarySwatch: Colors.blue,
     scaffoldBackgroundColor: MatchColorsLight.commonWhite,
     canvasColor: Colors.white,
-    appBarTheme: const AppBarTheme(backgroundColor: MatchColorsLight.primaryDefault, foregroundColor: Colors.white),
+    appBarTheme: const AppBarTheme(
+      backgroundColor: MatchColorsLight.primaryDefault,
+      foregroundColor: Colors.white,
+    ),
     textSelectionTheme: const TextSelectionThemeData(
       cursorColor: MatchColorsLight.primaryDefault, // 커서 색상
       selectionColor: MatchColorsLight.primaryDefault, // 선택된 텍스트 배경 색상
@@ -97,12 +100,24 @@ class AppTheme {
         strokeInverse: MatchColorsLight.commonWhite,
       ),
       InteractionColors(
-        interactionDimmed: const Color(0xFF171719).withValues(alpha: (0.52 * 255).round().toDouble()),
-        interactionDimmed_D: const Color(0xFF171719).withValues(alpha: (0.52 * 255).round().toDouble()),
-        interactionPressed: const Color(0xFF171719).withValues(alpha: (0.08 * 255).round().toDouble()),
-        interactionPressedInverse: const Color(0xFFFFFFFF).withValues(alpha: (0.12 * 255).round().toDouble()),
-        interactionTransparentDark: const Color(0xFF474747).withValues(alpha: (0.96 * 255).round().toDouble()),
-        interactionLinkPressedInverse: const Color(0xFFFFFFFF).withValues(alpha: (0.24 * 255).round().toDouble()),
+        interactionDimmed: const Color(
+          0xFF171719,
+        ).withValues(alpha: (0.52 * 255).round().toDouble()),
+        interactionDimmed_D: const Color(
+          0xFF171719,
+        ).withValues(alpha: (0.52 * 255).round().toDouble()),
+        interactionPressed: const Color(
+          0xFF171719,
+        ).withValues(alpha: (0.08 * 255).round().toDouble()),
+        interactionPressedInverse: const Color(
+          0xFFFFFFFF,
+        ).withValues(alpha: (0.12 * 255).round().toDouble()),
+        interactionTransparentDark: const Color(
+          0xFF474747,
+        ).withValues(alpha: (0.96 * 255).round().toDouble()),
+        interactionLinkPressedInverse: const Color(
+          0xFFFFFFFF,
+        ).withValues(alpha: (0.24 * 255).round().toDouble()),
       ),
     ],
   );
@@ -116,7 +131,10 @@ class AppTheme {
     scaffoldBackgroundColor: MatchColorsDark.commonWhite,
     canvasColor: Colors.white,
     // AppBar
-    appBarTheme: const AppBarTheme(backgroundColor: MatchColorsDark.coolNeutral50, foregroundColor: Colors.white),
+    appBarTheme: const AppBarTheme(
+      backgroundColor: MatchColorsDark.coolNeutral50,
+      foregroundColor: Colors.white,
+    ),
     textSelectionTheme: const TextSelectionThemeData(
       cursorColor: MatchColorsDark.primaryDefault, // 커서 색상
       selectionColor: MatchColorsDark.primaryDefault, // 선택된 텍스트 배경 색상
@@ -197,12 +215,24 @@ class AppTheme {
         strokeInverse: MatchColorsDark.commonWhite,
       ),
       InteractionColors(
-        interactionDimmed: const Color(0xFF000000).withValues(alpha: (0.80 * 255).round().toDouble()),
-        interactionDimmed_D: const Color(0xFFFFFFFF).withValues(alpha: (0.20 * 255).round().toDouble()),
-        interactionPressed: const Color(0xFF171719).withValues(alpha: (0.08 * 255).round().toDouble()),
-        interactionPressedInverse: const Color(0xFFFFFFFF).withValues(alpha: (0.12 * 255).round().toDouble()),
-        interactionTransparentDark: const Color(0xFF474747).withValues(alpha: (0.96 * 255).round().toDouble()),
-        interactionLinkPressedInverse: const Color(0xFFFFFFFF).withValues(alpha: (0.24 * 255).round().toDouble()),
+        interactionDimmed: const Color(
+          0xFF000000,
+        ).withValues(alpha: (0.80 * 255).round().toDouble()),
+        interactionDimmed_D: const Color(
+          0xFFFFFFFF,
+        ).withValues(alpha: (0.20 * 255).round().toDouble()),
+        interactionPressed: const Color(
+          0xFF171719,
+        ).withValues(alpha: (0.08 * 255).round().toDouble()),
+        interactionPressedInverse: const Color(
+          0xFFFFFFFF,
+        ).withValues(alpha: (0.12 * 255).round().toDouble()),
+        interactionTransparentDark: const Color(
+          0xFF474747,
+        ).withValues(alpha: (0.96 * 255).round().toDouble()),
+        interactionLinkPressedInverse: const Color(
+          0xFFFFFFFF,
+        ).withValues(alpha: (0.24 * 255).round().toDouble()),
       ),
     ],
   );

@@ -32,12 +32,18 @@ class SmallChip extends StatelessWidget {
     return Container(
       height: 36.0,
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-      decoration: BoxDecoration(color: MatchAppColors.fillColors.fillSoft_D, borderRadius: BorderRadius.circular(6.0)),
+      decoration: BoxDecoration(
+        color: MatchAppColors.fillColors.fillSoft_D,
+        borderRadius: BorderRadius.circular(6.0),
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
-        children: assetPosition == ChipIconPosition.LEFT ? _buildLeftIconLayout() : _buildRightIconLayout(),
+        children:
+            assetPosition == ChipIconPosition.LEFT
+                ? _buildLeftIconLayout()
+                : _buildRightIconLayout(),
       ),
     );
   }
@@ -59,7 +65,10 @@ class SmallChip extends StatelessWidget {
   }
 
   Text titleWidget() {
-    return Text(title, style: MatchTextStyles.Label1.copyWith(color: MatchAppColors.textColors.textSoft));
+    return Text(
+      title,
+      style: MatchTextStyles.Label1.copyWith(color: MatchAppColors.textColors.textSoft),
+    );
   }
 
   GestureDetector iconWidget() {

@@ -140,7 +140,10 @@ class DefaultSelectWidgetState extends State<DefaultSelectWidget> {
       readOnly: true,
       onTap: widget.onTap,
       style: MatchTextStyles.Body1_Regular.copyWith(
-        color: widget.isEnable ? MatchAppColors.textColors.textDefault : MatchAppColors.textColors.textDisabled,
+        color:
+            widget.isEnable
+                ? MatchAppColors.textColors.textDefault
+                : MatchAppColors.textColors.textDisabled,
       ),
       decoration: _defaultInputDecoration(),
       onChanged: (value) {
@@ -165,7 +168,10 @@ class DefaultSelectWidgetState extends State<DefaultSelectWidget> {
     var outlineInputBorderDefault = OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
       borderSide: BorderSide(
-        color: _errorText == null ? MatchAppColors.strokeColors.strokeDefault : MatchAppColors.strokeColors.strokeError,
+        color:
+            _errorText == null
+                ? MatchAppColors.strokeColors.strokeDefault
+                : MatchAppColors.strokeColors.strokeError,
         width: 1,
       ),
     );
@@ -173,7 +179,10 @@ class DefaultSelectWidgetState extends State<DefaultSelectWidget> {
     var outlineInputBorderFocus = OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
       borderSide: BorderSide(
-        color: _errorText == null ? MatchAppColors.strokeColors.strokeStrong : MatchAppColors.strokeColors.strokeError,
+        color:
+            _errorText == null
+                ? MatchAppColors.strokeColors.strokeStrong
+                : MatchAppColors.strokeColors.strokeError,
         width: 1,
       ),
     );
@@ -181,13 +190,20 @@ class DefaultSelectWidgetState extends State<DefaultSelectWidget> {
     return InputDecoration(
       contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 14),
       filled: true,
-      fillColor: widget.isEnable ? MatchAppColors.fillColors.fillDefault : MatchAppColors.fillColors.fillDisabled,
+      fillColor:
+          widget.isEnable
+              ? MatchAppColors.fillColors.fillDefault
+              : MatchAppColors.fillColors.fillDisabled,
       hintText: widget.hintText ?? '',
       hintStyle: MatchTextStyles.Body1_Regular.copyWith(
-        color: widget.isEnable ? MatchAppColors.textColors.textPlaceholder : MatchAppColors.textColors.textDisabled,
+        color:
+            widget.isEnable
+                ? MatchAppColors.textColors.textPlaceholder
+                : MatchAppColors.textColors.textDisabled,
       ),
       border: outlineInputBorderDefault, // 기본 테두리 스타일
-      focusedBorder: widget.onTap == null ? outlineInputBorderFocus : outlineInputBorderDefault, // 포커스 상태 테두리
+      focusedBorder:
+          widget.onTap == null ? outlineInputBorderFocus : outlineInputBorderDefault, // 포커스 상태 테두리
       enabledBorder: outlineInputBorderDefault, // 활성화 상태 테두리
       disabledBorder: outlineInputBorderDefault, // 비활성화 상태 테두리
       prefixIcon: preffixIconWidget(),
@@ -221,7 +237,10 @@ class DefaultSelectWidgetState extends State<DefaultSelectWidget> {
   Widget suffixIconWidget() {
     return Row(
       mainAxisSize: MainAxisSize.min,
-      children: [SvgPicture.asset(IconPath.iconDropArrow, height: 24, width: 24), const SizedBox(width: 12.0)],
+      children: [
+        SvgPicture.asset(IconPath.iconDropArrow, height: 24, width: 24),
+        const SizedBox(width: 12.0),
+      ],
     );
   }
 }

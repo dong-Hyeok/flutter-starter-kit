@@ -18,7 +18,13 @@ class LinkMicroSubButton extends StatefulWidget {
   final bool isEnable;
   final FutureOr<void> Function()? onTap;
 
-  const LinkMicroSubButton({required this.title, this.assetName, this.isEnable = true, this.onTap, super.key});
+  const LinkMicroSubButton({
+    required this.title,
+    this.assetName,
+    this.isEnable = true,
+    this.onTap,
+    super.key,
+  });
 
   @override
   State<LinkMicroSubButton> createState() => _LinkMicroSubButtonState();

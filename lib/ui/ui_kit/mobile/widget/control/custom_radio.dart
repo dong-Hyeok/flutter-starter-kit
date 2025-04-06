@@ -29,6 +29,8 @@ class CustomRadio extends StatelessWidget {
   }
 
   Widget radioButtonImage() {
-    return Row(children: [Image.network(imgUrl!, width: 24, height: 24), const SizedBox(width: 4.0)]);
+    return Row(
+      children: [Image.network(imgUrl!, width: 24, height: 24), const SizedBox(width: 4.0)],
+    );
   }
 }

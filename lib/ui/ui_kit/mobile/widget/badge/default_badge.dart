@@ -27,7 +27,10 @@ class DefaultBadge extends StatelessWidget {
     return IntrinsicWidth(
       child: Container(
         height: defaultBadgeStyle.height,
-        decoration: BoxDecoration(color: backgroundColor, borderRadius: BorderRadius.circular(12.0)),
+        decoration: BoxDecoration(
+          color: backgroundColor,
+          borderRadius: BorderRadius.circular(12.0),
+        ),
         padding: EdgeInsets.symmetric(horizontal: defaultBadgeStyle.paddingHorizontal),
         alignment: Alignment.center,
         child: Text(content, style: defaultBadgeStyle.textStyle.copyWith(color: textColor)),

@@ -93,7 +93,11 @@ class MatchCustomModal extends StatelessWidget {
           ),
         if (leftButtonTitle != null) const SizedBox(width: 8.0),
         Expanded(
-          child: LargePrimaryButton(title: rightButtonTitle, onTap: onClickRight, widthOption: ButtonWidthOption.FULL),
+          child: LargePrimaryButton(
+            title: rightButtonTitle,
+            onTap: onClickRight,
+            widthOption: ButtonWidthOption.FULL,
+          ),
         ),
       ],
     );

@@ -46,7 +46,10 @@ class DefaultChip extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
-        children: assetPosition == ChipIconPosition.LEFT ? _buildLeftIconLayout() : _buildRightIconLayout(),
+        children:
+            assetPosition == ChipIconPosition.LEFT
+                ? _buildLeftIconLayout()
+                : _buildRightIconLayout(),
       ),
     );
   }
@@ -54,11 +57,17 @@ class DefaultChip extends StatelessWidget {
   // 아이콘 왼쪽
   List<Widget> _buildLeftIconLayout() {
     return [
-      if (assetName != null) ...[SvgPicture.asset(assetName!, width: 16, height: 16), const SizedBox(width: 4.0)],
+      if (assetName != null) ...[
+        SvgPicture.asset(assetName!, width: 16, height: 16),
+        const SizedBox(width: 4.0),
+      ],
       Text(
         title,
         style: MatchTextStyles.Label1.copyWith(
-          color: isActive ? MatchAppColors.textColors.textInverse_D : MatchAppColors.textColors.textSoft,
+          color:
+              isActive
+                  ? MatchAppColors.textColors.textInverse_D
+                  : MatchAppColors.textColors.textSoft,
         ),
       ),
     ];
@@ -70,10 +79,16 @@ class DefaultChip extends StatelessWidget {
       Text(
         title,
         style: MatchTextStyles.Label1.copyWith(
-          color: isActive ? MatchAppColors.textColors.textInverse_D : MatchAppColors.textColors.textSoft,
+          color:
+              isActive
+                  ? MatchAppColors.textColors.textInverse_D
+                  : MatchAppColors.textColors.textSoft,
         ),
       ),
-      if (assetName != null) ...[const SizedBox(width: 4.0), SvgPicture.asset(assetName!, width: 16, height: 16)],
+      if (assetName != null) ...[
+        const SizedBox(width: 4.0),
+        SvgPicture.asset(assetName!, width: 16, height: 16),
+      ],
     ];
   }
 }

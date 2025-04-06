@@ -28,7 +28,9 @@ class SupportingMessage extends StatelessWidget {
           colorFilter: ColorFilter.mode(styleConfig.iconColor, BlendMode.srcIn),
         ),
         const SizedBox(width: 2.0),
-        Expanded(child: Text(text, style: MatchTextStyles.Caption1.copyWith(color: styleConfig.textColor))),
+        Expanded(
+          child: Text(text, style: MatchTextStyles.Caption1.copyWith(color: styleConfig.textColor)),
+        ),
       ],
     );
   }

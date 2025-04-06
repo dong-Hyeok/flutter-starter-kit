@@ -7,7 +7,7 @@ analyzer:
     constant_identifier_names: ignore
 
 formatter:
-  page_width: 120  # 한 줄 최대 길이 120자 설정
+  page_width: 100
 
 include: package:flutter_lints/flutter.yaml
 

@@ -10,8 +10,12 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
+  # SVG
   flutter_svg: ^2.0.17
+  # GetX
   get: ^4.6.6
+  # logger
+  logger: ^2.4.0
 
 dev_dependencies:
   flutter_test:

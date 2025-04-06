@@ -24,14 +24,17 @@ class ToastMessage {
     Get.rawSnackbar(
       messageText: Text(
         message,
-        style: MatchTextStyles.Body1_Regular.copyWith(color: MatchAppColors.textColors.textInverse_D),
+        style: MatchTextStyles.Body1_Regular.copyWith(
+          color: MatchAppColors.textColors.textInverse_D,
+        ),
       ),
       snackPosition: position,
       duration: Duration(milliseconds: milliseconds),
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
       borderRadius: 8,
       snackStyle: SnackStyle.FLOATING,
-      backgroundColor: backgroundColor ?? MatchAppColors.interactionColors.interactionTransparentDark,
+      backgroundColor:
+          backgroundColor ?? MatchAppColors.interactionColors.interactionTransparentDark,
       forwardAnimationCurve: Curves.decelerate,
       reverseAnimationCurve: Curves.decelerate,
       mainButton:
@@ -42,7 +45,10 @@ class ToastMessage {
                   IconPath.iconArrowRight,
                   height: 24,
                   width: 24,
-                  colorFilter: ColorFilter.mode(MatchAppColors.iconColors.iconInverse_D, BlendMode.srcIn),
+                  colorFilter: ColorFilter.mode(
+                    MatchAppColors.iconColors.iconInverse_D,
+                    BlendMode.srcIn,
+                  ),
                 ),
               )
               : null,

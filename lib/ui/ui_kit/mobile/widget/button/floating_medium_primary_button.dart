@@ -59,7 +59,10 @@ class FloatingMediumPrimaryButton extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
-            children: assetPosition == ButtonIconPosition.LEFT ? _buildLeftIconLayout() : _buildRightIconLayout(),
+            children:
+                assetPosition == ButtonIconPosition.LEFT
+                    ? _buildLeftIconLayout()
+                    : _buildRightIconLayout(),
           ),
         ),
       ),
@@ -88,16 +91,28 @@ class FloatingMediumPrimaryButton extends StatelessWidget {
   // 아이콘 왼쪽
   List<Widget> _buildLeftIconLayout() {
     return [
-      if (assetName != null) ...[SvgPicture.asset(assetName!, width: 20, height: 20), const SizedBox(width: 4.0)],
-      Text(title, style: MatchTextStyles.Button1.copyWith(color: MatchAppColors.textColors.textInverse_D)),
+      if (assetName != null) ...[
+        SvgPicture.asset(assetName!, width: 20, height: 20),
+        const SizedBox(width: 4.0),
+      ],
+      Text(
+        title,
+        style: MatchTextStyles.Button1.copyWith(color: MatchAppColors.textColors.textInverse_D),
+      ),
     ];
   }
 
   // 아이콘 오른쪽
   List<Widget> _buildRightIconLayout() {
     return [
-      Text(title, style: MatchTextStyles.Button1.copyWith(color: MatchAppColors.textColors.textInverse_D)),
-      if (assetName != null) ...[const SizedBox(width: 4.0), SvgPicture.asset(assetName!, width: 20, height: 20)],
+      Text(
+        title,
+        style: MatchTextStyles.Button1.copyWith(color: MatchAppColors.textColors.textInverse_D),
+      ),
+      if (assetName != null) ...[
+        const SizedBox(width: 4.0),
+        SvgPicture.asset(assetName!, width: 20, height: 20),
+      ],
     ];
   }
 

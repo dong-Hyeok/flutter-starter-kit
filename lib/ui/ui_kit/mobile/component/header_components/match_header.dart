@@ -36,7 +36,13 @@ class MatchAppbar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: _appBarStyle.backgroundColor, // AppBar 배경색
       title: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: [_backPressWidget(), const SizedBox(width: 4.0), _titleWidget(), const Spacer(), _rightIconWidget()],
+        children: [
+          _backPressWidget(),
+          const SizedBox(width: 4.0),
+          _titleWidget(),
+          const Spacer(),
+          _rightIconWidget(),
+        ],
       ),
     );
   }

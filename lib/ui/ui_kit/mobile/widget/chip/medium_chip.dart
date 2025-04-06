@@ -52,7 +52,10 @@ class MediumChip extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
-        children: assetPosition == ChipIconPosition.LEFT ? _buildLeftIconLayout() : _buildRightIconLayout(),
+        children:
+            assetPosition == ChipIconPosition.LEFT
+                ? _buildLeftIconLayout()
+                : _buildRightIconLayout(),
       ),
     );
   }
@@ -77,7 +80,8 @@ class MediumChip extends StatelessWidget {
     return Text(
       title,
       style: MatchTextStyles.Label2.copyWith(
-        color: isActive ? MatchAppColors.textColors.textDefault : MatchAppColors.textColors.textSoft,
+        color:
+            isActive ? MatchAppColors.textColors.textDefault : MatchAppColors.textColors.textSoft,
       ),
     );
   }
