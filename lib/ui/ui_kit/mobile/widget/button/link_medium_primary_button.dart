@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/toast_message.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
@@ -93,8 +93,8 @@ class _LinkMediumPrimaryButtonState extends State<LinkMediumPrimaryButton> {
         style: MatchTextStyles.Link1.copyWith(
           color:
               _isPressed
-                  ? MatchAppColors.textColors.textPrimary.withOpacity(0.24)
-                  : MatchAppColors.textColors.textPrimary,
+                  ? AppColors.textColors.textPrimary.withOpacity(0.24)
+                  : AppColors.textColors.textPrimary,
         ),
       ),
     ];
@@ -108,8 +108,8 @@ class _LinkMediumPrimaryButtonState extends State<LinkMediumPrimaryButton> {
         style: MatchTextStyles.Link1.copyWith(
           color:
               _isPressed
-                  ? MatchAppColors.textColors.textPrimary.withOpacity(0.24)
-                  : MatchAppColors.textColors.textPrimary,
+                  ? AppColors.textColors.textPrimary.withOpacity(0.24)
+                  : AppColors.textColors.textPrimary,
         ),
       ),
       if (widget.assetName != null) ...[

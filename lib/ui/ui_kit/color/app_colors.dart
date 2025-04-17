@@ -5,7 +5,7 @@ import 'package:flutter_starter_kit/ui/ui_kit/color/interaction_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/color/stroke_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/color/text_colors.dart';
 
-class MatchAppColors {
+class AppColors {
   static late TextColors textColors;
   static late IconColors iconColors;
   static late FillColors fillColors;

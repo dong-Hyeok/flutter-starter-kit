@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_primary_button.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_secondary_button.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
@@ -65,7 +65,7 @@ class MatchDefaultModal extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 24.0),
       child: Dialog(
         insetPadding: EdgeInsets.zero,
-        backgroundColor: MatchAppColors.fillColors.fillDefault_D,
+        backgroundColor: AppColors.fillColors.fillDefault_D,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
         child: Container(
           width: MediaQuery.of(context).size.width * 1,
@@ -77,7 +77,7 @@ class MatchDefaultModal extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: MatchTextStyles.Title.copyWith(color: MatchAppColors.textColors.textStrong),
+                style: MatchTextStyles.Title.copyWith(color: AppColors.textColors.textStrong),
               ),
               _bodyWidget(),
               const SizedBox(height: 32),
@@ -98,7 +98,7 @@ class MatchDefaultModal extends StatelessWidget {
           child: Text(
             body!,
             style: MatchTextStyles.Body1_Regular.copyWith(
-              color: MatchAppColors.textColors.textDefault,
+              color: AppColors.textColors.textDefault,
             ),
           ),
         );

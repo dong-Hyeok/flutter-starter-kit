@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/core/logger/app_logger';
-import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/control_components/radio_button_list.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/header_components/match_header.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/modal_components/match_custom_modal.dart';
@@ -174,7 +174,8 @@ class _DesignSystemModalState extends State<DesignSystemModal> {
       children: [
         Text('출근 확정하시겠습니까?',
             style: MatchTextStyles.Title.copyWith(
-                color: MatchAppColors.textColors.textStrong)),
+                color: AppColors.textColors.textStrong),
+        ),
       ],
     );
   }
@@ -200,7 +201,8 @@ class _DesignSystemModalState extends State<DesignSystemModal> {
       children: [
         Text('내비게이션 선택',
             style: MatchTextStyles.Title.copyWith(
-                color: MatchAppColors.textColors.textStrong)),
+                color: AppColors.textColors.textStrong),
+        ),
         RadioButtonList<Map>(
           contentList: userList,
           valueBuilder: (map) => map.name,

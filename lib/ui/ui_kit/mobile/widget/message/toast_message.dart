@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -25,7 +25,7 @@ class ToastMessage {
       messageText: Text(
         message,
         style: MatchTextStyles.Body1_Regular.copyWith(
-          color: MatchAppColors.textColors.textInverse_D,
+          color: AppColors.textColors.textInverse_D,
         ),
       ),
       snackPosition: position,
@@ -34,7 +34,7 @@ class ToastMessage {
       borderRadius: 8,
       snackStyle: SnackStyle.FLOATING,
       backgroundColor:
-          backgroundColor ?? MatchAppColors.interactionColors.interactionTransparentDark,
+          backgroundColor ?? AppColors.interactionColors.interactionTransparentDark,
       forwardAnimationCurve: Curves.decelerate,
       reverseAnimationCurve: Curves.decelerate,
       mainButton:
@@ -46,7 +46,7 @@ class ToastMessage {
                   height: 24,
                   width: 24,
                   colorFilter: ColorFilter.mode(
-                    MatchAppColors.iconColors.iconInverse_D,
+                    AppColors.iconColors.iconInverse_D,
                     BlendMode.srcIn,
                   ),
                 ),

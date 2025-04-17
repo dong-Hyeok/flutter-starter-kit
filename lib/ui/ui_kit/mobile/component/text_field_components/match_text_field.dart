@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/supporting_message.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_message_styles.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
@@ -196,8 +196,7 @@ class MatchTextFieldState extends State<MatchTextField> {
       style: MatchTextStyles.Body1_Regular.copyWith(
         color:
             widget.isEnable
-                ? MatchAppColors.textColors.textDefault
-                : MatchAppColors.textColors.textDisabled,
+                ? AppColors.textColors.textDefault : AppColors.textColors.textDisabled,
       ),
       decoration: _defaultInputDecoration(),
       onChanged: (value) {
@@ -227,8 +226,8 @@ class MatchTextFieldState extends State<MatchTextField> {
       borderSide: BorderSide(
         color:
             _errorText == null
-                ? MatchAppColors.strokeColors.strokeDefault
-                : MatchAppColors.strokeColors.strokeError,
+                ? AppColors.strokeColors.strokeDefault
+                : AppColors.strokeColors.strokeError,
         width: 1,
       ),
     );
@@ -238,8 +237,8 @@ class MatchTextFieldState extends State<MatchTextField> {
       borderSide: BorderSide(
         color:
             _errorText == null
-                ? MatchAppColors.strokeColors.strokeFocus
-                : MatchAppColors.strokeColors.strokeError,
+                ? AppColors.strokeColors.strokeFocus
+                : AppColors.strokeColors.strokeError,
         width: 1,
       ),
     );
@@ -249,14 +248,13 @@ class MatchTextFieldState extends State<MatchTextField> {
       filled: true,
       fillColor:
           widget.isEnable
-              ? MatchAppColors.fillColors.fillDefault
-              : MatchAppColors.fillColors.fillDisabled,
+              ? AppColors.fillColors.fillDefault : AppColors.fillColors.fillDisabled,
       hintText: widget.hintText ?? '',
       hintStyle: MatchTextStyles.Body1_Regular.copyWith(
         color:
             widget.isEnable
-                ? MatchAppColors.textColors.textPlaceholder
-                : MatchAppColors.textColors.textDisabled,
+                ? AppColors.textColors.textPlaceholder
+                : AppColors.textColors.textDisabled,
       ),
       border: outlineInputBorderDefault, // 기본 테두리 스타일
       focusedBorder:
@@ -322,7 +320,7 @@ class MatchTextFieldState extends State<MatchTextField> {
               },
               child: Icon(
                 isObscure ? Icons.visibility_off : Icons.visibility, // isObscure 상태에 따라 아이콘 변경
-                color: MatchAppColors.iconColors.iconSoft,
+                color: AppColors.iconColors.iconSoft,
               ),
             ),
           ),

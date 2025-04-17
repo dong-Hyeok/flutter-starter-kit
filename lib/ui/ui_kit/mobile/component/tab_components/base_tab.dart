@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 
 /// [BaseTab]
 ///
@@ -74,16 +74,16 @@ class _BaseTabState extends State<BaseTab> with TickerProviderStateMixin {
       mainAxisSize: MainAxisSize.max,
       children: [
         Container(
-          color: widget.tabBackgroundColor ?? MatchAppColors.fillColors.fillDefault_D,
+          color: widget.tabBackgroundColor ?? AppColors.fillColors.fillDefault_D,
           child: TabBar(
             controller: _tabController,
-            labelColor: widget.labelColor ?? MatchAppColors.textColors.textPrimary,
+            labelColor: widget.labelColor ?? AppColors.textColors.textPrimary,
             labelPadding: const EdgeInsets.symmetric(horizontal: 10.0),
-            unselectedLabelColor: widget.unselectedLabelColor ?? MatchAppColors.textColors.textSoft,
+            unselectedLabelColor: widget.unselectedLabelColor ?? AppColors.textColors.textSoft,
             indicator: UnderlineTabIndicator(
               borderSide: BorderSide(
                 width: 2.0,
-                color: widget.underlineColor ?? MatchAppColors.strokeColors.strokePrimary,
+                color: widget.underlineColor ?? AppColors.strokeColors.strokePrimary,
               ),
             ),
             tabs: widget.tabs,

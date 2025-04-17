@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 
 class MatchHeaderStyles {
   final SystemUiOverlayStyle systemOverlayStyle;
@@ -18,17 +18,15 @@ class MatchHeaderStyles {
   factory MatchHeaderStyles.from(bool isBackground) {
     return MatchHeaderStyles(
       systemOverlayStyle: isBackground ? SystemUiOverlayStyle.light : SystemUiOverlayStyle.dark,
-      backgroundColor: isBackground ? MatchAppColors.fillColors.fillPrimary_D : Colors.transparent,
+      backgroundColor: isBackground ? AppColors.fillColors.fillPrimary_D : Colors.transparent,
       iconColor: ColorFilter.mode(
         isBackground
-            ? MatchAppColors.iconColors.iconInverse_D
-            : MatchAppColors.iconColors.iconDefault,
+            ? AppColors.iconColors.iconInverse_D : AppColors.iconColors.iconDefault,
         BlendMode.srcIn,
       ),
       textColor:
           isBackground
-              ? MatchAppColors.textColors.textInverse_D
-              : MatchAppColors.textColors.textStrong,
+              ? AppColors.textColors.textInverse_D : AppColors.textColors.textStrong,
     );
   }
 }

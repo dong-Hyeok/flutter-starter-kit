@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_chip_styles.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
 
 /// [DefaultChip]
@@ -26,13 +26,13 @@ class DefaultChip extends StatelessWidget {
   });
 
   final BoxDecoration activeTrue = BoxDecoration(
-    color: MatchAppColors.fillColors.fillPrimary,
+    color: AppColors.fillColors.fillPrimary,
     borderRadius: BorderRadius.circular(6.0),
   );
 
   final BoxDecoration activeFalse = BoxDecoration(
-    color: MatchAppColors.fillColors.fillDefault_D,
-    border: Border.all(color: MatchAppColors.strokeColors.strokeDefault, width: 1.0),
+    color: AppColors.fillColors.fillDefault_D,
+    border: Border.all(color: AppColors.strokeColors.strokeDefault, width: 1.0),
     borderRadius: BorderRadius.circular(6.0),
   );
 
@@ -66,8 +66,7 @@ class DefaultChip extends StatelessWidget {
         style: MatchTextStyles.Label1.copyWith(
           color:
               isActive
-                  ? MatchAppColors.textColors.textInverse_D
-                  : MatchAppColors.textColors.textSoft,
+                  ? AppColors.textColors.textInverse_D : AppColors.textColors.textSoft,
         ),
       ),
     ];
@@ -81,8 +80,7 @@ class DefaultChip extends StatelessWidget {
         style: MatchTextStyles.Label1.copyWith(
           color:
               isActive
-                  ? MatchAppColors.textColors.textInverse_D
-                  : MatchAppColors.textColors.textSoft,
+                  ? AppColors.textColors.textInverse_D : AppColors.textColors.textSoft,
         ),
       ),
       if (assetName != null) ...[

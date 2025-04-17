@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/control/custom_radio.dart';
 
 /// [RadioButtonList] 위젯
@@ -37,7 +37,7 @@ class RadioButtonListState<T> extends State<RadioButtonList<T>> {
   int? selectedIndex;
 
   final _boxDecoration = BoxDecoration(
-    border: Border(bottom: BorderSide(color: MatchAppColors.strokeColors.strokeSoft, width: 1.0)),
+    border: Border(bottom: BorderSide(color: AppColors.strokeColors.strokeSoft, width: 1.0)),
   );
 
   @override

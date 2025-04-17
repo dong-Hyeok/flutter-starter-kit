@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/toast_message.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
 
@@ -63,12 +63,12 @@ class _LinkMicroSubButtonState extends State<LinkMicroSubButton> {
             style: MatchTextStyles.Link2.copyWith(
               color:
                   _isPressed
-                      ? MatchAppColors.textColors.textSoft.withOpacity(0.24)
-                      : MatchAppColors.textColors.textSoft,
+                      ? AppColors.textColors.textSoft.withOpacity(0.24)
+                      : AppColors.textColors.textSoft,
               decorationColor:
                   _isPressed
-                      ? MatchAppColors.textColors.textSoft.withOpacity(0.24)
-                      : MatchAppColors.textColors.textSoft,
+                      ? AppColors.textColors.textSoft.withOpacity(0.24)
+                      : AppColors.textColors.textSoft,
             ),
           ),
         ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/floating_medium_primary_button.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_primary_button.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_secondary_button.dart';
@@ -89,13 +89,13 @@ class DesignSystemButton extends StatelessWidget {
                     MicroColorButton(
                       title: '(MC)Color',
                       widthOption: ButtonWidthOption.WRAP,
-                      backgroundColor: MatchAppColors.fillColors.fillOrange,
+                      backgroundColor: AppColors.fillColors.fillOrange,
                       onTap: () => ToastMessage.defaultToast(message: '버튼 클릭'),
                     ),
                     MicroColorButton(
                       title: '(MC)Color',
                       widthOption: ButtonWidthOption.WRAP,
-                      backgroundColor: MatchAppColors.fillColors.fillError,
+                      backgroundColor: AppColors.fillColors.fillError,
                       onTap: () => ToastMessage.defaultToast(message: '버튼 클릭'),
                     ),
                   ],

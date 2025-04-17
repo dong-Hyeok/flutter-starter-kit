@@ -12,7 +12,7 @@ import 'package:flutter_starter_kit/ui/screens/design_system_example/mobile_exam
 import 'package:flutter_starter_kit/ui/screens/design_system_example/mobile_example/design_system_tab.dart';
 import 'package:flutter_starter_kit/ui/screens/design_system_example/mobile_example/design_system_text_field.dart';
 import 'package:flutter_starter_kit/ui/screens/design_system_example/mobile_example/design_system_tooltip.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_primary_button.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
 import 'package:get/get.dart';
@@ -27,7 +27,7 @@ class DesignSystemHome extends StatelessWidget {
   Widget build(BuildContext context) {
     // 테마 변경시 컬러 다시 초기화 해야함
     // 앱 테마를 변경하면 화면이 다시 빌드되기 때문에 테마 변경 버튼이 있는 곳에 색상 초기화 부분이 있어도 상관 없음.
-    MatchAppColors.initialize(context);
+    AppColors.initialize(context);
 
     return Scaffold(
         appBar: AppBar(

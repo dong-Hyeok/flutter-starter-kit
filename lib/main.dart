@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/data/controller/main_controller.dart';
 import 'package:flutter_starter_kit/ui/screens/home/home_screen.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/theme/app_theme.dart';
 import 'package:get/get.dart';
 
@@ -33,7 +33,7 @@ class StartApp extends StatelessWidget {
           home: FutureBuilder<void>(
             future: _initializeApp(context),
             builder: (context, snapshot) {
-              MatchAppColors.initialize(context);
+              AppColors.initialize(context);
 
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Scaffold(body: Center(child: CircularProgressIndicator()));

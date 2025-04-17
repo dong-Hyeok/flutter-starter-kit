@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MatchColorsDark {
+class ThemeColorsDark {
   // CoolNeutral
   static const Color coolNeutral900 = Color(0xFFF9FAFB);
   static const Color coolNeutral800 = Color(0xFFF3F4F6);

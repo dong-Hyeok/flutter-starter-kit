@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 
 enum MatchMessageStyles { ERROR, HELPER, CHECK, TOOLTIP }
 
@@ -16,26 +16,26 @@ class MatchMessageStyleConfig {
       case MatchMessageStyles.ERROR:
         return MatchMessageStyleConfig(
           icon: IconPath.iconTriangleWarning,
-          iconColor: MatchAppColors.iconColors.iconError,
-          textColor: MatchAppColors.textColors.textError,
+          iconColor: AppColors.iconColors.iconError,
+          textColor: AppColors.textColors.textError,
         );
       case MatchMessageStyles.HELPER:
         return MatchMessageStyleConfig(
           icon: IconPath.iconCircleWarning,
-          iconColor: MatchAppColors.iconColors.iconSoft,
-          textColor: MatchAppColors.textColors.textHelper,
+          iconColor: AppColors.iconColors.iconSoft,
+          textColor: AppColors.textColors.textHelper,
         );
       case MatchMessageStyles.CHECK:
         return MatchMessageStyleConfig(
           icon: IconPath.iconCheck,
-          iconColor: MatchAppColors.iconColors.iconDisabled,
-          textColor: MatchAppColors.textColors.textHelper,
+          iconColor: AppColors.iconColors.iconDisabled,
+          textColor: AppColors.textColors.textHelper,
         );
       case MatchMessageStyles.TOOLTIP:
         return MatchMessageStyleConfig(
           icon: IconPath.iconCircleQuestion,
-          iconColor: MatchAppColors.iconColors.iconSoft,
-          textColor: MatchAppColors.textColors.textHelper,
+          iconColor: AppColors.iconColors.iconSoft,
+          textColor: AppColors.textColors.textHelper,
         );
     }
   }

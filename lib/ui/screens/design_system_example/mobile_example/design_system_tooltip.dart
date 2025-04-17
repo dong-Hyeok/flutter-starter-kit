@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/header_components/match_header.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/divider/divider.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/tooltip/match_custom_tooltip.dart';
@@ -78,7 +78,7 @@ class DesignSystemTooltip extends StatelessWidget {
         Text(
           title,
           style: MatchTextStyles.Body1_Medium.copyWith(
-              color: MatchAppColors.textColors.textStrong),
+              color: AppColors.textColors.textStrong),
         ),
         const SizedBox(width: 2),
       ],
@@ -92,7 +92,7 @@ class DesignSystemTooltip extends StatelessWidget {
         Text(
           title,
           style: MatchTextStyles.Body1_Medium.copyWith(
-              color: MatchAppColors.textColors.textStrong),
+              color: AppColors.textColors.textStrong),
         ),
         const SizedBox(width: 2),
         SvgPicture.asset(

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/toast_message.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_chip_styles.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
 
 /// [MediumChip]
@@ -31,14 +31,14 @@ class MediumChip extends StatelessWidget {
   });
 
   final BoxDecoration activeTrue = BoxDecoration(
-    color: MatchAppColors.fillColors.fillDefault_D,
-    border: Border.all(color: MatchAppColors.strokeColors.strokeStrong, width: 1.0),
+    color: AppColors.fillColors.fillDefault_D,
+    border: Border.all(color: AppColors.strokeColors.strokeStrong, width: 1.0),
     borderRadius: BorderRadius.circular(4.0),
   );
 
   final BoxDecoration activeFalse = BoxDecoration(
-    color: MatchAppColors.fillColors.fillDefault_D,
-    border: Border.all(color: MatchAppColors.strokeColors.strokeDefault, width: 1.0),
+    color: AppColors.fillColors.fillDefault_D,
+    border: Border.all(color: AppColors.strokeColors.strokeDefault, width: 1.0),
     borderRadius: BorderRadius.circular(4.0),
   );
 
@@ -81,7 +81,7 @@ class MediumChip extends StatelessWidget {
       title,
       style: MatchTextStyles.Label2.copyWith(
         color:
-            isActive ? MatchAppColors.textColors.textDefault : MatchAppColors.textColors.textSoft,
+            isActive ? AppColors.textColors.textDefault : AppColors.textColors.textSoft,
       ),
     );
   }
@@ -93,7 +93,7 @@ class MediumChip extends StatelessWidget {
         assetName!,
         width: 16,
         height: 16,
-        colorFilter: ColorFilter.mode(MatchAppColors.iconColors.iconDefault, BlendMode.srcIn),
+        colorFilter: ColorFilter.mode(AppColors.iconColors.iconDefault, BlendMode.srcIn),
       ),
     );
   }

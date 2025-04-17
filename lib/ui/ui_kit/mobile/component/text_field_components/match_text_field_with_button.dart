@@ -10,7 +10,7 @@ import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_textfield_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/supporting_message.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_message_styles.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
@@ -242,8 +242,8 @@ class MatchTextFieldWithButtonState extends State<MatchTextFieldWithButton> {
           style: MatchTextStyles.Body1_Regular.copyWith(
             color:
                 widget.isEnable
-                    ? MatchAppColors.textColors.textDefault
-                    : MatchAppColors.textColors.textDisabled,
+                    ? AppColors.textColors.textDefault
+                    : AppColors.textColors.textDisabled,
           ),
           decoration: _defaultInputDecoration(),
           onChanged: (value) {
@@ -275,8 +275,8 @@ class MatchTextFieldWithButtonState extends State<MatchTextFieldWithButton> {
       borderSide: BorderSide(
         color:
             _errorText == null
-                ? MatchAppColors.strokeColors.strokeDefault
-                : MatchAppColors.strokeColors.strokeError,
+                ? AppColors.strokeColors.strokeDefault
+                : AppColors.strokeColors.strokeError,
         width: 1,
       ),
     );
@@ -286,8 +286,8 @@ class MatchTextFieldWithButtonState extends State<MatchTextFieldWithButton> {
       borderSide: BorderSide(
         color:
             _errorText == null
-                ? MatchAppColors.strokeColors.strokeFocus
-                : MatchAppColors.strokeColors.strokeError,
+                ? AppColors.strokeColors.strokeFocus
+                : AppColors.strokeColors.strokeError,
         width: 1,
       ),
     );
@@ -297,14 +297,13 @@ class MatchTextFieldWithButtonState extends State<MatchTextFieldWithButton> {
       filled: true,
       fillColor:
           widget.isEnable
-              ? MatchAppColors.fillColors.fillDefault
-              : MatchAppColors.fillColors.fillDisabled,
+              ? AppColors.fillColors.fillDefault : AppColors.fillColors.fillDisabled,
       hintText: widget.hintText ?? '',
       hintStyle: MatchTextStyles.Body1_Regular.copyWith(
         color:
             widget.isEnable
-                ? MatchAppColors.textColors.textPlaceholder
-                : MatchAppColors.textColors.textDisabled,
+                ? AppColors.textColors.textPlaceholder
+                : AppColors.textColors.textDisabled,
       ),
       border: outlineInputBorderDefault, // 기본 테두리 스타일
       focusedBorder:
@@ -373,7 +372,7 @@ class MatchTextFieldWithButtonState extends State<MatchTextFieldWithButton> {
               },
               child: Icon(
                 isObscure ? Icons.visibility_off : Icons.visibility, // isObscure 상태에 따라 아이콘 변경
-                color: MatchAppColors.iconColors.iconSoft,
+                color: AppColors.iconColors.iconSoft,
               ),
             ),
           ),
@@ -399,7 +398,7 @@ class MatchTextFieldWithButtonState extends State<MatchTextFieldWithButton> {
         child: Center(
           child: Text(
             "인증 성공",
-            style: MatchTextStyles.Caption1.copyWith(color: MatchAppColors.textColors.textActive),
+            style: MatchTextStyles.Caption1.copyWith(color: AppColors.textColors.textActive),
           ),
         ),
       ),
@@ -429,8 +428,8 @@ class MatchTextFieldWithButtonState extends State<MatchTextFieldWithButton> {
                   style: MatchTextStyles.Caption1.copyWith(
                     color:
                         _errorText == null
-                            ? MatchAppColors.textColors.textActive
-                            : MatchAppColors.textColors.textError,
+                            ? AppColors.textColors.textActive
+                            : AppColors.textColors.textError,
                   ),
                 );
               }),

@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/toast_message.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
@@ -38,14 +38,14 @@ class MediumPrimaryButton extends StatelessWidget {
     return Ink(
       height: 40.0,
       decoration: BoxDecoration(
-        color: MatchAppColors.fillColors.fillPrimary,
+        color: AppColors.fillColors.fillPrimary,
         borderRadius: BorderRadius.circular(6.0),
       ),
       child: InkWell(
         onTap: onTabCall(),
         borderRadius: BorderRadius.circular(6.0),
-        splashColor: MatchAppColors.interactionColors.interactionPressedInverse,
-        highlightColor: MatchAppColors.interactionColors.interactionPressedInverse,
+        splashColor: AppColors.interactionColors.interactionPressedInverse,
+        highlightColor: AppColors.interactionColors.interactionPressedInverse,
         child: Container(
           width: _getWidth(),
           padding: _getPadding(),
@@ -92,7 +92,7 @@ class MediumPrimaryButton extends StatelessWidget {
       ],
       Text(
         title,
-        style: MatchTextStyles.Button1.copyWith(color: MatchAppColors.textColors.textInverse_D),
+        style: MatchTextStyles.Button1.copyWith(color: AppColors.textColors.textInverse_D),
       ),
     ];
   }
@@ -102,7 +102,7 @@ class MediumPrimaryButton extends StatelessWidget {
     return [
       Text(
         title,
-        style: MatchTextStyles.Button1.copyWith(color: MatchAppColors.textColors.textInverse_D),
+        style: MatchTextStyles.Button1.copyWith(color: AppColors.textColors.textInverse_D),
       ),
       if (assetName != null) ...[
         const SizedBox(width: 4.0),

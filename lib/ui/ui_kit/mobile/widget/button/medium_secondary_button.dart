@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/toast_message.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
@@ -43,15 +43,14 @@ class MediumSecondaryButton extends StatelessWidget {
       decoration: BoxDecoration(
         color:
             isEnable
-                ? MatchAppColors.fillColors.fillSecondary
-                : MatchAppColors.fillColors.fillDisabled,
+                ? AppColors.fillColors.fillSecondary : AppColors.fillColors.fillDisabled,
         borderRadius: BorderRadius.circular(6.0),
       ),
       child: InkWell(
         onTap: onTabCall(),
         borderRadius: BorderRadius.circular(6.0),
-        splashColor: MatchAppColors.interactionColors.interactionPressed,
-        highlightColor: MatchAppColors.interactionColors.interactionPressed,
+        splashColor: AppColors.interactionColors.interactionPressed,
+        highlightColor: AppColors.interactionColors.interactionPressed,
         child: Container(
           width: _getWidth(),
           padding: _getPadding(),
@@ -101,8 +100,7 @@ class MediumSecondaryButton extends StatelessWidget {
         style: MatchTextStyles.Button1.copyWith(
           color:
               isEnable
-                  ? MatchAppColors.textColors.textDefault
-                  : MatchAppColors.textColors.textDisabled,
+                  ? AppColors.textColors.textDefault : AppColors.textColors.textDisabled,
         ),
       ),
     ];
@@ -116,8 +114,7 @@ class MediumSecondaryButton extends StatelessWidget {
         style: MatchTextStyles.Button1.copyWith(
           color:
               isEnable
-                  ? MatchAppColors.textColors.textDefault
-                  : MatchAppColors.textColors.textDisabled,
+                  ? AppColors.textColors.textDefault : AppColors.textColors.textDisabled,
         ),
       ),
       if (assetName != null) ...[

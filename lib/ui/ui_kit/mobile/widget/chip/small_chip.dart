@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/toast_message.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_chip_styles.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
 
 /// [SmallChip]
@@ -33,7 +33,7 @@ class SmallChip extends StatelessWidget {
       height: 36.0,
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
-        color: MatchAppColors.fillColors.fillSoft_D,
+        color: AppColors.fillColors.fillSoft_D,
         borderRadius: BorderRadius.circular(6.0),
       ),
       child: Row(
@@ -67,7 +67,7 @@ class SmallChip extends StatelessWidget {
   Text titleWidget() {
     return Text(
       title,
-      style: MatchTextStyles.Label1.copyWith(color: MatchAppColors.textColors.textSoft),
+      style: MatchTextStyles.Label1.copyWith(color: AppColors.textColors.textSoft),
     );
   }
 
@@ -78,7 +78,7 @@ class SmallChip extends StatelessWidget {
         assetName!,
         width: 16,
         height: 16,
-        colorFilter: ColorFilter.mode(MatchAppColors.iconColors.iconDefault, BlendMode.srcIn),
+        colorFilter: ColorFilter.mode(AppColors.iconColors.iconDefault, BlendMode.srcIn),
       ),
     );
   }

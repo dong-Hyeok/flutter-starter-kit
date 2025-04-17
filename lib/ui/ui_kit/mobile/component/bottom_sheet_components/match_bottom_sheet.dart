@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_primary_button.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_secondary_button.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
@@ -67,7 +67,7 @@ class MatchBottomSheet extends StatelessWidget {
       ),
       isDismissible: isBarrierDismissible,
       isScrollControlled: true,
-      backgroundColor: MatchAppColors.fillColors.fillDefault_D,
+      backgroundColor: AppColors.fillColors.fillDefault_D,
     );
   }
 
@@ -112,7 +112,7 @@ class MatchBottomSheet extends StatelessWidget {
             // 타이틀
             Text(
               title!,
-              style: MatchTextStyles.Title.copyWith(color: MatchAppColors.textColors.textStrong),
+              style: MatchTextStyles.Title.copyWith(color: AppColors.textColors.textStrong),
             ),
             // 타이틀 아이콘
             if (onClickTitleIcon != null) ...{
@@ -138,7 +138,7 @@ class MatchBottomSheet extends StatelessWidget {
           width: 40,
           height: 6,
           decoration: BoxDecoration(
-            color: MatchAppColors.iconColors.iconDisabledSoft,
+            color: AppColors.iconColors.iconDisabledSoft,
             borderRadius: BorderRadius.circular(3),
           ),
         ),
@@ -163,7 +163,7 @@ class MatchBottomSheet extends StatelessWidget {
           width: 134,
           height: 5,
           decoration: BoxDecoration(
-            color: MatchAppColors.fillColors.fillStrong,
+            color: AppColors.fillColors.fillStrong,
             borderRadius: BorderRadius.circular(3),
           ),
         ),

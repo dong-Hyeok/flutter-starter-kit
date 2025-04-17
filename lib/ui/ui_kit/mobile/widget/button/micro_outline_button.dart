@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/color/match_app_colors.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/toast_message.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
@@ -43,16 +43,15 @@ class MicroOutlineButton extends StatelessWidget {
       decoration: BoxDecoration(
         color:
             isEnable
-                ? MatchAppColors.fillColors.fillDefault
-                : MatchAppColors.fillColors.fillDisabled,
+                ? AppColors.fillColors.fillDefault : AppColors.fillColors.fillDisabled,
         borderRadius: BorderRadius.circular(4.0),
-        border: Border.all(color: MatchAppColors.strokeColors.strokeStrong, width: 1.0),
+        border: Border.all(color: AppColors.strokeColors.strokeStrong, width: 1.0),
       ),
       child: InkWell(
         onTap: onTabCall(),
         borderRadius: BorderRadius.circular(4.0),
-        splashColor: MatchAppColors.interactionColors.interactionPressed,
-        highlightColor: MatchAppColors.interactionColors.interactionPressed,
+        splashColor: AppColors.interactionColors.interactionPressed,
+        highlightColor: AppColors.interactionColors.interactionPressed,
         child: Container(
           width: _getWidth(),
           padding: _getPadding(),
@@ -102,8 +101,7 @@ class MicroOutlineButton extends StatelessWidget {
         style: MatchTextStyles.Button2.copyWith(
           color:
               isEnable
-                  ? MatchAppColors.textColors.textDefault
-                  : MatchAppColors.textColors.textDisabled,
+                  ? AppColors.textColors.textDefault : AppColors.textColors.textDisabled,
         ),
       ),
     ];
@@ -117,8 +115,7 @@ class MicroOutlineButton extends StatelessWidget {
         style: MatchTextStyles.Button2.copyWith(
           color:
               isEnable
-                  ? MatchAppColors.textColors.textDefault
-                  : MatchAppColors.textColors.textDisabled,
+                  ? AppColors.textColors.textDefault : AppColors.textColors.textDisabled,
         ),
       ),
       if (assetName != null) ...[
