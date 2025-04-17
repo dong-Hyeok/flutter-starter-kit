@@ -5,7 +5,7 @@ import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/chip/default_chip.da
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/chip/medium_chip.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/chip/small_chip.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_chip_styles.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 
 
 class DesignSystemChip extends StatefulWidget {
@@ -37,7 +37,7 @@ class _DesignSystemChipState extends State<DesignSystemChip> {
           children: [
             const Text(
               '1. Default Chip',
-              style: MatchTextStyles.Body1_Medium,
+              style: TextStyles.Body1_Medium,
             ),
             const SizedBox(height: 8),
             Row(
@@ -69,7 +69,7 @@ class _DesignSystemChipState extends State<DesignSystemChip> {
             const SizedBox(height: 24),
             const Text(
               '2. Medium Chip',
-              style: MatchTextStyles.Body1_Medium,
+              style: TextStyles.Body1_Medium,
             ),
             const SizedBox(height: 8),
             Row(
@@ -113,7 +113,7 @@ class _DesignSystemChipState extends State<DesignSystemChip> {
             const SizedBox(height: 24),
             const Text(
               '3. Small Chip',
-              style: MatchTextStyles.Body1_Medium,
+              style: TextStyles.Body1_Medium,
             ),
             const SizedBox(height: 8),
             const Row(
@@ -136,7 +136,7 @@ class _DesignSystemChipState extends State<DesignSystemChip> {
             const SizedBox(height: 24),
             const Text(
               '3. Medium Chip List',
-              style: MatchTextStyles.Body1_Medium,
+              style: TextStyles.Body1_Medium,
             ),
             const SizedBox(height: 8),
             MediumChipList(

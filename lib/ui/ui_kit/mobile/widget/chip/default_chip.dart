@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_chip_styles.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 
 /// [DefaultChip]
 ///
@@ -63,7 +63,7 @@ class DefaultChip extends StatelessWidget {
       ],
       Text(
         title,
-        style: MatchTextStyles.Label1.copyWith(
+        style: TextStyles.Label1.copyWith(
           color:
               isActive
                   ? AppColors.textColors.textInverse_D : AppColors.textColors.textSoft,
@@ -77,7 +77,7 @@ class DefaultChip extends StatelessWidget {
     return [
       Text(
         title,
-        style: MatchTextStyles.Label1.copyWith(
+        style: TextStyles.Label1.copyWith(
           color:
               isActive
                   ? AppColors.textColors.textInverse_D : AppColors.textColors.textSoft,

@@ -5,7 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/toast_message.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 
 /// [MediumPrimaryButton]
 ///
@@ -92,7 +92,7 @@ class MediumPrimaryButton extends StatelessWidget {
       ],
       Text(
         title,
-        style: MatchTextStyles.Button1.copyWith(color: AppColors.textColors.textInverse_D),
+        style: TextStyles.Button1.copyWith(color: AppColors.textColors.textInverse_D),
       ),
     ];
   }
@@ -102,7 +102,7 @@ class MediumPrimaryButton extends StatelessWidget {
     return [
       Text(
         title,
-        style: MatchTextStyles.Button1.copyWith(color: AppColors.textColors.textInverse_D),
+        style: TextStyles.Button1.copyWith(color: AppColors.textColors.textInverse_D),
       ),
       if (assetName != null) ...[
         const SizedBox(width: 4.0),

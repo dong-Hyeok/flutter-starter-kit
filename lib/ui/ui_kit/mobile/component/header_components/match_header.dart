@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_header_styles.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
@@ -57,7 +57,7 @@ class MatchAppbar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   Text _titleWidget() {
-    return Text(title, style: MatchTextStyles.Title.copyWith(color: _appBarStyle.textColor));
+    return Text(title, style: TextStyles.Title.copyWith(color: _appBarStyle.textColor));
   }
 
   /// 배경 상태 상관 없이 아이콘은 호출부에서 컨트롤 하는 것으로 결정....

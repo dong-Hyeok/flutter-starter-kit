@@ -5,7 +5,7 @@ import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/supporting_message.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_message_styles.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 
 /// [MatchTextField] 위젯
 /// ### validator 와 formFieldKey 사용하지 않는 이유
@@ -176,7 +176,7 @@ class MatchTextFieldState extends State<MatchTextField> {
     return widget.labelText != null
         ? Padding(
           padding: const EdgeInsets.only(bottom: 4.0),
-          child: Text(widget.labelText!, style: MatchTextStyles.Label1),
+          child: Text(widget.labelText!, style: TextStyles.Label1),
         )
         : const SizedBox.shrink();
   }
@@ -193,7 +193,7 @@ class MatchTextFieldState extends State<MatchTextField> {
       onTap: widget.onTap,
       obscureText: isObscure,
       inputFormatters: widget.textInputFormatterList,
-      style: MatchTextStyles.Body1_Regular.copyWith(
+      style: TextStyles.Body1_Regular.copyWith(
         color:
             widget.isEnable
                 ? AppColors.textColors.textDefault : AppColors.textColors.textDisabled,
@@ -250,7 +250,7 @@ class MatchTextFieldState extends State<MatchTextField> {
           widget.isEnable
               ? AppColors.fillColors.fillDefault : AppColors.fillColors.fillDisabled,
       hintText: widget.hintText ?? '',
-      hintStyle: MatchTextStyles.Body1_Regular.copyWith(
+      hintStyle: TextStyles.Body1_Regular.copyWith(
         color:
             widget.isEnable
                 ? AppColors.textColors.textPlaceholder

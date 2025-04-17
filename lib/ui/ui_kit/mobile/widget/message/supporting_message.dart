@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_message_styles.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 /// [SupportingMessage]
@@ -29,7 +29,7 @@ class SupportingMessage extends StatelessWidget {
         ),
         const SizedBox(width: 2.0),
         Expanded(
-          child: Text(text, style: MatchTextStyles.Caption1.copyWith(color: styleConfig.textColor)),
+          child: Text(text, style: TextStyles.Caption1.copyWith(color: styleConfig.textColor)),
         ),
       ],
     );

@@ -5,7 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/toast_message.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 
 /// [LinkMicroSecondaryButton]
 ///
@@ -90,7 +90,7 @@ class _LinkMicroSecondaryButtonState extends State<LinkMicroSecondaryButton> {
       ],
       Text(
         widget.title,
-        style: MatchTextStyles.Link3.copyWith(
+        style: TextStyles.Link3.copyWith(
           color:
               _isPressed
                   ? AppColors.textColors.textSoft.withOpacity(0.24)
@@ -105,7 +105,7 @@ class _LinkMicroSecondaryButtonState extends State<LinkMicroSecondaryButton> {
     return [
       Text(
         widget.title,
-        style: MatchTextStyles.Link3.copyWith(
+        style: TextStyles.Link3.copyWith(
           color:
               _isPressed
                   ? AppColors.textColors.textSoft.withOpacity(0.24)

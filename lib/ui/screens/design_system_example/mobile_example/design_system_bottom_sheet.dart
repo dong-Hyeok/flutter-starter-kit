@@ -7,7 +7,7 @@ import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_primary
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/toast_message.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
 import 'package:get/get.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 
 class Map {
   final String name;
@@ -69,7 +69,7 @@ class _DesignSystemBottomSheetState extends State<DesignSystemBottomSheet> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('디폴트 바텀시트 예시', style: MatchTextStyles.Title),
+              const Text('디폴트 바텀시트 예시', style: TextStyles.Title),
               const SizedBox(height: 20),
               LargePrimaryButton(
                 title: 'Height Fix Radio List(타이틀/바디/버튼 두개)',
@@ -216,7 +216,7 @@ class _DesignSystemBottomSheetState extends State<DesignSystemBottomSheet> {
               },
               child: Text(
                 userLongList[index].name,
-                style: MatchTextStyles.Body1_Regular,
+                style: TextStyles.Body1_Regular,
               ),
             ),
           );

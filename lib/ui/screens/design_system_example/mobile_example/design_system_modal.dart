@@ -8,7 +8,7 @@ import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/modal_components/
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_primary_button.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/toast_message.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 import 'package:get/get.dart';
 
 class Map {
@@ -51,7 +51,7 @@ class _DesignSystemModalState extends State<DesignSystemModal> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('디폴트 모달 예시', style: MatchTextStyles.Title),
+              const Text('디폴트 모달 예시', style: TextStyles.Title),
               const SizedBox(height: 20),
               LargePrimaryButton(
                 title: '디폴트 모달(타이틀/바디/버튼 두개)',
@@ -85,7 +85,7 @@ class _DesignSystemModalState extends State<DesignSystemModal> {
                 },
               ),
               const SizedBox(height: 100),
-              const Text('커스텀 모달 예시', style: MatchTextStyles.Title),
+              const Text('커스텀 모달 예시', style: TextStyles.Title),
               const SizedBox(height: 20),
               LargePrimaryButton(
                 title: '커스텀 모달 (정적 일반)',
@@ -173,7 +173,7 @@ class _DesignSystemModalState extends State<DesignSystemModal> {
     return Column(
       children: [
         Text('출근 확정하시겠습니까?',
-            style: MatchTextStyles.Title.copyWith(
+          style: TextStyles.Title.copyWith(
                 color: AppColors.textColors.textStrong),
         ),
       ],
@@ -200,7 +200,7 @@ class _DesignSystemModalState extends State<DesignSystemModal> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text('내비게이션 선택',
-            style: MatchTextStyles.Title.copyWith(
+          style: TextStyles.Title.copyWith(
                 color: AppColors.textColors.textStrong),
         ),
         RadioButtonList<Map>(

@@ -13,7 +13,7 @@ import 'package:get/get.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/supporting_message.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_message_styles.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 
 /// [MatchTextFieldWithButton] 컴포넌트
 /// ### 텍스트 필드와 우측 버튼이 함께 있는 컴포넌트
@@ -219,7 +219,7 @@ class MatchTextFieldWithButtonState extends State<MatchTextFieldWithButton> {
     return widget.labelText != null
         ? Padding(
           padding: const EdgeInsets.only(bottom: 4.0),
-          child: Text(widget.labelText!, style: MatchTextStyles.Label1),
+          child: Text(widget.labelText!, style: TextStyles.Label1),
         )
         : const SizedBox.shrink();
   }
@@ -239,7 +239,7 @@ class MatchTextFieldWithButtonState extends State<MatchTextFieldWithButton> {
           onTap: widget.onTap,
           obscureText: isObscure,
           inputFormatters: widget.textInputFormatterList,
-          style: MatchTextStyles.Body1_Regular.copyWith(
+          style: TextStyles.Body1_Regular.copyWith(
             color:
                 widget.isEnable
                     ? AppColors.textColors.textDefault
@@ -299,7 +299,7 @@ class MatchTextFieldWithButtonState extends State<MatchTextFieldWithButton> {
           widget.isEnable
               ? AppColors.fillColors.fillDefault : AppColors.fillColors.fillDisabled,
       hintText: widget.hintText ?? '',
-      hintStyle: MatchTextStyles.Body1_Regular.copyWith(
+      hintStyle: TextStyles.Body1_Regular.copyWith(
         color:
             widget.isEnable
                 ? AppColors.textColors.textPlaceholder
@@ -398,7 +398,7 @@ class MatchTextFieldWithButtonState extends State<MatchTextFieldWithButton> {
         child: Center(
           child: Text(
             "인증 성공",
-            style: MatchTextStyles.Caption1.copyWith(color: AppColors.textColors.textActive),
+            style: TextStyles.Caption1.copyWith(color: AppColors.textColors.textActive),
           ),
         ),
       ),
@@ -425,7 +425,7 @@ class MatchTextFieldWithButtonState extends State<MatchTextFieldWithButton> {
                 );
                 return Text(
                   "$minutes:$seconds",
-                  style: MatchTextStyles.Caption1.copyWith(
+                  style: TextStyles.Caption1.copyWith(
                     color:
                         _errorText == null
                             ? AppColors.textColors.textActive

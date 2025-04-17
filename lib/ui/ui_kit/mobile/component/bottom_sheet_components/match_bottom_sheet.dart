@@ -5,7 +5,7 @@ import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_primary_button.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_secondary_button.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
@@ -112,7 +112,7 @@ class MatchBottomSheet extends StatelessWidget {
             // 타이틀
             Text(
               title!,
-              style: MatchTextStyles.Title.copyWith(color: AppColors.textColors.textStrong),
+              style: TextStyles.Title.copyWith(color: AppColors.textColors.textStrong),
             ),
             // 타이틀 아이콘
             if (onClickTitleIcon != null) ...{

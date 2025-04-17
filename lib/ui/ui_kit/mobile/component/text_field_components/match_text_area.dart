@@ -4,7 +4,7 @@ import 'package:flutter_starter_kit/core/logger/app_logger';
 import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/supporting_message.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_message_styles.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 
 /// [DefaultTextArea] 위젯
 ///
@@ -128,7 +128,7 @@ class MatchTextAreaState extends State<MatchTextArea> {
     return widget.labelText != null
         ? Padding(
           padding: const EdgeInsets.only(bottom: 4.0),
-          child: Text(widget.labelText!, style: MatchTextStyles.Label1),
+          child: Text(widget.labelText!, style: TextStyles.Label1),
         )
         : const SizedBox.shrink();
   }
@@ -148,7 +148,7 @@ class MatchTextAreaState extends State<MatchTextArea> {
           obscureText: isObscure,
           textAlignVertical: TextAlignVertical.top,
           inputFormatters: widget.textInputFormatterList,
-          style: MatchTextStyles.Body1_Regular.copyWith(
+          style: TextStyles.Body1_Regular.copyWith(
             color: AppColors.textColors.textDefault,
           ),
           decoration: _defaultInputDecoration(),
@@ -175,13 +175,13 @@ class MatchTextAreaState extends State<MatchTextArea> {
             children: [
               Text(
                 '${widget.controller.text.length}',
-                style: MatchTextStyles.Body3_Regular.copyWith(
+                style: TextStyles.Body3_Regular.copyWith(
                   color: AppColors.textColors.textSoft,
                 ),
               ),
               Text(
                 '/${widget.maxLength}',
-                style: MatchTextStyles.Body3_Medium.copyWith(
+                style: TextStyles.Body3_Medium.copyWith(
                   color: AppColors.textColors.textDefault,
                 ),
               ),
@@ -223,7 +223,7 @@ class MatchTextAreaState extends State<MatchTextArea> {
           widget.isEnable
               ? AppColors.fillColors.fillDefault : AppColors.fillColors.fillDisabled,
       hintText: widget.hintText ?? '',
-      hintStyle: MatchTextStyles.Body1_Regular.copyWith(
+      hintStyle: TextStyles.Body1_Regular.copyWith(
         color:
             widget.isEnable
                 ? AppColors.textColors.textPlaceholder

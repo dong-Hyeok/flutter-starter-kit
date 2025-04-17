@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/tooltip/custom_tooltip_clip.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_tooltip_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -182,7 +182,7 @@ class _MatchCustomTooltipState extends State<MatchCustomTooltip> {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             DefaultTextStyle(
-              style: MatchTextStyles.Body3_Regular.copyWith(
+              style: TextStyles.Body3_Regular.copyWith(
                 color: AppColors.textColors.textInverse_D,
               ),
               child: Text(widget.tooltipText),

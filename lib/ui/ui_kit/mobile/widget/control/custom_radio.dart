@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 /// [CustomRadio]
@@ -23,7 +23,7 @@ class CustomRadio extends StatelessWidget {
         SvgPicture.asset(isCheck ? IconPath.iconCheckRadio : IconPath.iconUncheckRadio),
         const SizedBox(width: 6.0),
         if (imgUrl != null) radioButtonImage() else const SizedBox.shrink(),
-        Text(value, style: MatchTextStyles.Label1),
+        Text(value, style: TextStyles.Label1),
       ],
     );
   }

@@ -5,7 +5,7 @@ import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/control_component
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/control/custom_check_box.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/control/custom_radio.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_control_styles.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 
 
 class User {
@@ -89,7 +89,7 @@ class DesignSystemControl extends StatelessWidget {
               // 체크 박스 리스트
               const Text(
                 '1. 체크박스 리스트 컴포넌트',
-                style: MatchTextStyles.Body1_Medium,
+                style: TextStyles.Body1_Medium,
               ),
               const SizedBox(height: 12.0),
               SizedBox(
@@ -133,7 +133,7 @@ class DesignSystemControl extends StatelessWidget {
               const SizedBox(height: 48.0),
               const Text(
                 '2. 라디오 리스트 컴포넌트',
-                style: MatchTextStyles.Body1_Medium,
+                style: TextStyles.Body1_Medium,
               ),
               const SizedBox(height: 12.0),
               SizedBox(

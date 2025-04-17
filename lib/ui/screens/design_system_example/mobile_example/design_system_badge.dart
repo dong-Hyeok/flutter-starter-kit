@@ -4,7 +4,7 @@ import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/badge/default_badge.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/badge/icon_badge.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/match_badge_styles.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_text_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 
 class DesignSystemBadge extends StatelessWidget {
   const DesignSystemBadge({super.key});
@@ -23,7 +23,7 @@ class DesignSystemBadge extends StatelessWidget {
                 padding: EdgeInsets.only(bottom: 16),
                 child: Text(
                   'Icon 뱃지',
-                  style: MatchTextStyles.Headline2_SemiBold,
+                  style: TextStyles.Headline2_SemiBold,
                 ),
               ),
               IconBadge(
@@ -64,7 +64,7 @@ class DesignSystemBadge extends StatelessWidget {
                 padding: EdgeInsets.only(top: 46, bottom: 16),
                 child: Text(
                   'Default 뱃지 (Medium)',
-                  style: MatchTextStyles.Headline2_SemiBold,
+                  style: TextStyles.Headline2_SemiBold,
                 ),
               ),
               DefaultBadge(
@@ -94,7 +94,7 @@ class DesignSystemBadge extends StatelessWidget {
                 padding: EdgeInsets.only(top: 46, bottom: 16),
                 child: Text(
                   'Default 뱃지 (Small)',
-                  style: MatchTextStyles.Headline2_SemiBold,
+                  style: TextStyles.Headline2_SemiBold,
                 ),
               ),
               DefaultBadge(
