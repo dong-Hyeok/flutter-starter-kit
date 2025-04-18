@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_starter_kit/core/logger/app_logger';
 import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/supporting_message.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_message_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_message_styles.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 
 /// [DefaultTextArea] 위젯
@@ -26,7 +26,7 @@ import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 /// - [textInputFormatterList]: 인풋 포멧터
 /// - [helperText]: 도움말 메시지
 /// - [errorTextValidator]: 텍스트 필드 입력 내용 체크하는 커스텀 메서드
-class MatchTextArea extends StatefulWidget {
+class CustomTextArea extends StatefulWidget {
   final TextEditingController controller;
   final String? hintText;
   final String? labelText;
@@ -46,7 +46,7 @@ class MatchTextArea extends StatefulWidget {
   final String? helperText;
   final String? Function(String?)? errorTextValidator;
 
-  const MatchTextArea({
+  const CustomTextArea({
     required this.controller,
     this.hintText,
     this.labelText,
@@ -69,10 +69,10 @@ class MatchTextArea extends StatefulWidget {
   });
 
   @override
-  State<MatchTextArea> createState() => MatchTextAreaState();
+  State<CustomTextArea> createState() => CustomTextAreaState();
 }
 
-class MatchTextAreaState extends State<MatchTextArea> {
+class CustomTextAreaState extends State<CustomTextArea> {
   String? _errorText;
   late bool isObscure;
 
@@ -116,9 +116,9 @@ class MatchTextAreaState extends State<MatchTextArea> {
         // (하단) 상태 메시지
         const SizedBox(height: 4.0),
         if (_errorText != null)
-          SupportingMessage(text: _errorText!, messageStyles: MatchMessageStyles.ERROR)
+          SupportingMessage(text: _errorText!, messageStyles: CustomMessageStyles.ERROR)
         else if (widget.helperText != null)
-          SupportingMessage(text: widget.helperText!, messageStyles: MatchMessageStyles.HELPER),
+          SupportingMessage(text: widget.helperText!, messageStyles: CustomMessageStyles.HELPER),
       ],
     );
   }

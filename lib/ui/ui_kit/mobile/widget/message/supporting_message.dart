@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_message_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_message_styles.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -10,13 +10,13 @@ import 'package:flutter_svg/flutter_svg.dart';
 /// -[messageStyles]: 메시지 스타일
 class SupportingMessage extends StatelessWidget {
   final String text;
-  final MatchMessageStyles messageStyles;
+  final CustomMessageStyles messageStyles;
 
   const SupportingMessage({required this.text, required this.messageStyles, super.key});
 
   @override
   Widget build(BuildContext context) {
-    final styleConfig = MatchMessageStyleConfig.from(messageStyles);
+    final styleConfig = CustomMessageStyleConfig.from(messageStyles);
 
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,

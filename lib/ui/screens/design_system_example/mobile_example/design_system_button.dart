@@ -14,7 +14,7 @@ import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/micro_color_b
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/micro_outline_button.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/micro_secondary_button.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/toast_message.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_button_styles.dart';
 
 class DesignSystemButton extends StatelessWidget {
   const DesignSystemButton({super.key});

@@ -2,21 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 
-class MatchHeaderStyles {
+class CustomAppbarStyles {
   final SystemUiOverlayStyle systemOverlayStyle;
   final Color backgroundColor;
   final ColorFilter iconColor;
   final Color textColor;
 
-  MatchHeaderStyles({
+  CustomAppbarStyles({
     required this.systemOverlayStyle,
     required this.backgroundColor,
     required this.iconColor,
     required this.textColor,
   });
 
-  factory MatchHeaderStyles.from(bool isBackground) {
-    return MatchHeaderStyles(
+  factory CustomAppbarStyles.from(bool isBackground) {
+    return CustomAppbarStyles(
       systemOverlayStyle: isBackground ? SystemUiOverlayStyle.light : SystemUiOverlayStyle.dark,
       backgroundColor: isBackground ? AppColors.fillColors.fillPrimary_D : Colors.transparent,
       iconColor: ColorFilter.mode(

@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_header_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_header_styles.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
-class MatchAppbar extends StatelessWidget implements PreferredSizeWidget {
+class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final bool isBackPress;
   final String? rightIcon;
   final VoidCallback? onRightIconPressed;
   final bool isBackground;
 
-  const MatchAppbar({
+  const CustomAppbar({
     required this.title,
     this.isBackPress = true,
     this.rightIcon,
@@ -24,7 +24,7 @@ class MatchAppbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Size get preferredSize => const Size.fromHeight(56.0);
 
-  MatchHeaderStyles get _appBarStyle => MatchHeaderStyles.from(isBackground);
+  CustomAppbarStyles get _appBarStyle => CustomAppbarStyles.from(isBackground);
 
   @override
   Widget build(BuildContext context) {

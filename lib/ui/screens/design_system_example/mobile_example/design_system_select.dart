@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_primary_button.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/select/default_select_widget.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_button_styles.dart';
 
 class DesignSystemSelect extends StatelessWidget {
   DesignSystemSelect({super.key});

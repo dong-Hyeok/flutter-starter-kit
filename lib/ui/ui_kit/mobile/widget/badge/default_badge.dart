@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_badge_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_badge_styles.dart';
 
 /// [DefaultBadge]
 ///

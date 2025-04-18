@@ -4,7 +4,7 @@ import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/chip_components/m
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/chip/default_chip.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/chip/medium_chip.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/chip/small_chip.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_chip_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_chip_styles.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 
 

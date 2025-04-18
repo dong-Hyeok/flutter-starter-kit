@@ -3,7 +3,7 @@ import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/badge/default_badge.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/badge/icon_badge.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_badge_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_badge_styles.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 
 class DesignSystemBadge extends StatelessWidget {

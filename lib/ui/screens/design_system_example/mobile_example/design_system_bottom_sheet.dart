@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/core/logger/app_logger';
-import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/bottom_sheet_components/match_bottom_sheet.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/bottom_sheet_components/custom_bottom_sheet.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/control_components/radio_button_list.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/header_components/match_header.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/appbar_components/custom_appbar.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_primary_button.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/toast_message.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_button_styles.dart';
 import 'package:get/get.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 
@@ -57,7 +57,7 @@ class _DesignSystemBottomSheetState extends State<DesignSystemBottomSheet> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MatchAppbar(
+      appBar: CustomAppbar(
         title: "BottomSheet",
         // rightIcon: AppImages.iconAlertActiveInverse,
         onRightIconPressed: () {},
@@ -110,7 +110,7 @@ class _DesignSystemBottomSheetState extends State<DesignSystemBottomSheet> {
   }
 
   void _showBottomSheet1() {
-    MatchBottomSheet.show(
+    CustomBottomSheet.show(
       title: "내비게이션 선택",
       bodyWidget: bottomSheetBody2(),
       leftButtonTitle: '닫기',
@@ -127,7 +127,7 @@ class _DesignSystemBottomSheetState extends State<DesignSystemBottomSheet> {
   }
 
   void _showBottomSheet2() {
-    MatchBottomSheet.show(
+    CustomBottomSheet.show(
       title: "내비게이션 선택",
       bodyWidget: bottomSheetBody1(),
       rightButtonTitle: '확인',
@@ -142,14 +142,14 @@ class _DesignSystemBottomSheetState extends State<DesignSystemBottomSheet> {
   }
 
   void _showBottomSheet3() {
-    MatchBottomSheet.show(
+    CustomBottomSheet.show(
       title: "내비게이션 선택",
       bodyWidget: bottomSheetBody3(),
     );
   }
 
   void _showBottomSheet4() {
-    MatchBottomSheet.show(
+    CustomBottomSheet.show(
       bodyWidget: bottomSheetBody1(),
       rightButtonTitle: '확인',
       onClickRight: () {

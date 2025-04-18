@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/supporting_message.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_message_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_message_styles.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -112,9 +112,9 @@ class DefaultSelectWidgetState extends State<DefaultSelectWidget> {
         // (하단) 상태 메시지
         const SizedBox(height: 4.0),
         if (_errorText != null)
-          SupportingMessage(text: _errorText!, messageStyles: MatchMessageStyles.ERROR)
+          SupportingMessage(text: _errorText!, messageStyles: CustomMessageStyles.ERROR)
         else if (widget.helperText != null)
-          SupportingMessage(text: widget.helperText!, messageStyles: MatchMessageStyles.HELPER),
+          SupportingMessage(text: widget.helperText!, messageStyles: CustomMessageStyles.HELPER),
       ],
     );
   }

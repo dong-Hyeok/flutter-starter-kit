@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/chip/medium_chip.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_chip_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_chip_styles.dart';
 
 class MediumChipList extends StatelessWidget {
   final List<String> titles;

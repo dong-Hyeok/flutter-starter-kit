@@ -2,38 +2,38 @@ import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/tooltip/custom_tooltip_clip.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_tooltip_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_tooltip_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-/// [MatchCustomTooltip]
+/// [CustomTooltip]
 ///
 /// ### 파라미터
 /// - [iconWidget]: 툴팁을 호출하기 위해 클릭하는 아이콘 위젯
 /// - [subWidget]: iconWidget 왼쪽에 위치하는 위젯
 /// - [tooltipText]: 툴팁에 들어갈 내용
 /// - [tooltipIcon]: 툴팁에 들어갈 아이콘(우측에 위치)
-/// - [matchTooltipStyles]: 툴팁 스타일
-class MatchCustomTooltip extends StatefulWidget {
+/// - [customTooltipStyles]: 툴팁 스타일
+class CustomTooltip extends StatefulWidget {
   final Widget iconWidget;
   final Widget? subWidget;
   final String tooltipText;
   final String? tooltipIcon;
-  final MatchTooltipStyles matchTooltipStyles;
+  final CustomTooltipStyles customTooltipStyles;
 
-  const MatchCustomTooltip({
+  const CustomTooltip({
     super.key,
     required this.iconWidget,
     this.subWidget,
     required this.tooltipText,
     this.tooltipIcon,
-    required this.matchTooltipStyles,
+    required this.customTooltipStyles,
   });
 
   @override
-  State<MatchCustomTooltip> createState() => _MatchCustomTooltipState();
+  State<CustomTooltip> createState() => _CustomTooltipState();
 }
 
-class _MatchCustomTooltipState extends State<MatchCustomTooltip> {
+class _CustomTooltipState extends State<CustomTooltip> {
   OverlayEntry? _overlayEntry;
   final GlobalKey _iconKey = GlobalKey(); // 아이콘 키
   final GlobalKey _tooltipKey = GlobalKey(); // 툴팁 키
@@ -127,25 +127,25 @@ class _MatchCustomTooltipState extends State<MatchCustomTooltip> {
   double _getTooltipTopPosition(Offset targetPosition, Size targetSize) {
     var topPosi = 0.0;
 
-    switch (widget.matchTooltipStyles) {
-      case MatchTooltipStyles.START_BOTTOM:
+    switch (widget.customTooltipStyles) {
+      case CustomTooltipStyles.START_BOTTOM:
         break;
 
-      case MatchTooltipStyles.CENTER_BOTTOM:
+      case CustomTooltipStyles.CENTER_BOTTOM:
         topPosi = targetPosition.dy + targetSize.height + 2;
         break;
 
-      case MatchTooltipStyles.END_BOTTOM:
+      case CustomTooltipStyles.END_BOTTOM:
         break;
 
-      case MatchTooltipStyles.START_TOP:
+      case CustomTooltipStyles.START_TOP:
         break;
 
-      case MatchTooltipStyles.CENTER_TOP:
+      case CustomTooltipStyles.CENTER_TOP:
         topPosi = targetPosition.dy - (targetSize.height + 10);
         break;
 
-      case MatchTooltipStyles.END_TOP:
+      case CustomTooltipStyles.END_TOP:
         break;
     }
 
@@ -159,9 +159,9 @@ class _MatchCustomTooltipState extends State<MatchCustomTooltip> {
   }
 
   EdgeInsets getPaddingType() {
-    if (widget.matchTooltipStyles == MatchTooltipStyles.START_TOP ||
-        widget.matchTooltipStyles == MatchTooltipStyles.CENTER_TOP ||
-        widget.matchTooltipStyles == MatchTooltipStyles.END_TOP) {
+    if (widget.customTooltipStyles == CustomTooltipStyles.START_TOP ||
+        widget.customTooltipStyles == CustomTooltipStyles.CENTER_TOP ||
+        widget.customTooltipStyles == CustomTooltipStyles.END_TOP) {
       return const EdgeInsets.only(left: 4, right: 4, top: 2, bottom: 8);
     } else {
       return const EdgeInsets.only(left: 4, right: 4, top: 8, bottom: 2);
@@ -171,7 +171,7 @@ class _MatchCustomTooltipState extends State<MatchCustomTooltip> {
   /// 커스텀 툴팁 위젯
   Widget tooltipWidget() {
     return ClipPath(
-      clipper: CustomTooltipClip(tooltipStyles: widget.matchTooltipStyles),
+      clipper: CustomTooltipClip(tooltipStyles: widget.customTooltipStyles),
       child: Container(
         key: _tooltipKey,
         color: AppColors.interactionColors.interactionTransparentDark,

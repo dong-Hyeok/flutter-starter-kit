@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_tooltip_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_tooltip_styles.dart';
 
-/// MatchCustomTooltip 에서 사용하는 툴팁 UI를 그리는 클래스
+/// CustomTooltipClip 에서 사용하는 툴팁 UI를 그리는 클래스
 class CustomTooltipClip extends CustomClipper<Path> {
-  final MatchTooltipStyles tooltipStyles;
+  final CustomTooltipStyles tooltipStyles;
 
   CustomTooltipClip({required this.tooltipStyles});
 
@@ -28,9 +28,9 @@ class CustomTooltipClip extends CustomClipper<Path> {
 
   /// [사각형그림] - 타입 두개
   void _getRRect(Path path, double height, double width, double triangleHeight, tooltipStyles) {
-    if (tooltipStyles == MatchTooltipStyles.START_TOP ||
-        tooltipStyles == MatchTooltipStyles.CENTER_TOP ||
-        tooltipStyles == MatchTooltipStyles.END_TOP) {
+    if (tooltipStyles == CustomTooltipStyles.START_TOP ||
+        tooltipStyles == CustomTooltipStyles.CENTER_TOP ||
+        tooltipStyles == CustomTooltipStyles.END_TOP) {
       path.addRRect(
         RRect.fromRectAndRadius(
           Rect.fromLTWH(0, 0, width, height - triangleHeight), // 높이를 삼각형 높이만큼 줄임
@@ -57,37 +57,37 @@ class CustomTooltipClip extends CustomClipper<Path> {
     double trianglePadding,
   ) {
     switch (tooltipStyles) {
-      case MatchTooltipStyles.START_BOTTOM:
+      case CustomTooltipStyles.START_BOTTOM:
         path.moveTo(trianglePadding, triangleHeight); // 삼각형 왼쪽 꼭짓점
         path.lineTo(trianglePadding + triangleWidth / 2, 0); // 삼각형 위쪽 꼭짓점
         path.lineTo(trianglePadding + triangleWidth, triangleHeight); // 삼각형 오른쪽 꼭짓점
         break;
 
-      case MatchTooltipStyles.CENTER_BOTTOM:
+      case CustomTooltipStyles.CENTER_BOTTOM:
         path.moveTo(width / 2 - (triangleWidth / 2), triangleHeight);
         path.lineTo(width / 2, 0);
         path.lineTo(width / 2 + (triangleWidth / 2), triangleHeight);
         break;
 
-      case MatchTooltipStyles.END_BOTTOM:
+      case CustomTooltipStyles.END_BOTTOM:
         path.moveTo(width - (trianglePadding + triangleWidth), triangleHeight);
         path.lineTo(width - (trianglePadding + triangleWidth / 2), 0);
         path.lineTo(width - trianglePadding, triangleHeight);
         break;
 
-      case MatchTooltipStyles.START_TOP:
+      case CustomTooltipStyles.START_TOP:
         path.moveTo(trianglePadding, height - triangleHeight);
         path.lineTo(trianglePadding + triangleWidth / 2, height);
         path.lineTo(trianglePadding + triangleWidth, height - triangleHeight);
         break;
 
-      case MatchTooltipStyles.CENTER_TOP:
+      case CustomTooltipStyles.CENTER_TOP:
         path.moveTo(width / 2 - (triangleWidth / 2), height - triangleHeight);
         path.lineTo(width / 2, height);
         path.lineTo(width / 2 + (triangleWidth / 2), height - triangleHeight);
         break;
 
-      case MatchTooltipStyles.END_TOP:
+      case CustomTooltipStyles.END_TOP:
         path.moveTo(width - (trianglePadding + triangleWidth), height - triangleHeight);
         path.lineTo(width - (trianglePadding + triangleWidth / 2), height);
         path.lineTo(width - trianglePadding, height - triangleHeight);

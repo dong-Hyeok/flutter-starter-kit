@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/core/logger/app_logger';
 import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/control_components/radio_button_list.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/header_components/match_header.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/modal_components/match_custom_modal.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/modal_components/match_default_modal.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/appbar_components/custom_appbar.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/modal_components/custom_base_modal.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/modal_components/custom_default_modal.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_primary_button.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/toast_message.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_button_styles.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 import 'package:get/get.dart';
 
@@ -40,7 +40,7 @@ class _DesignSystemModalState extends State<DesignSystemModal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MatchAppbar(
+      appBar: CustomAppbar(
         title: "Modal",
         onRightIconPressed: () {},
         isBackground: true,
@@ -110,7 +110,7 @@ class _DesignSystemModalState extends State<DesignSystemModal> {
   }
 
   void _showDialog1() {
-    MatchDefaultModal.show(
+    CustomDefaultModal.show(
       title: '타이틀!',
       body: '바디바디!!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~',
       leftButtonTitle: '닫기',
@@ -125,7 +125,7 @@ class _DesignSystemModalState extends State<DesignSystemModal> {
   }
 
   void _showDialog2() {
-    MatchDefaultModal.show(
+    CustomDefaultModal.show(
       title: '타이틀!',
       body: '바디바디!!',
       rightButtonTitle: '확인',
@@ -136,7 +136,7 @@ class _DesignSystemModalState extends State<DesignSystemModal> {
   }
 
   void _showDialog3() {
-    MatchDefaultModal.show(
+    CustomDefaultModal.show(
       title: '타이틀!',
       leftButtonTitle: '닫기',
       rightButtonTitle: '확인',
@@ -150,7 +150,7 @@ class _DesignSystemModalState extends State<DesignSystemModal> {
   }
 
   void _showDialog4() {
-    MatchDefaultModal.show(
+    CustomDefaultModal.show(
       title: '타이틀!',
       rightButtonTitle: '확인',
       onClickRight: () {
@@ -160,7 +160,7 @@ class _DesignSystemModalState extends State<DesignSystemModal> {
   }
 
   void _showCustomModal1() {
-    MatchCustomModal.show(
+    CustomBaseModal.show(
       bodyWidget: customDialogBody1(),
       rightButtonTitle: '확인',
       onClickRight: () {
@@ -181,7 +181,7 @@ class _DesignSystemModalState extends State<DesignSystemModal> {
   }
 
   void _showCustomModal2() {
-    MatchCustomModal.show(
+    CustomBaseModal.show(
       bodyWidget: customDialogBody2(),
       leftButtonTitle: '닫기',
       rightButtonTitle: '확인',

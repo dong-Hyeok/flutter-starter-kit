@@ -6,16 +6,16 @@ import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
 import 'package:flutter_starter_kit/data/controller/util_controller/timer_controller.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_primary_button.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_secondary_button.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_textfield_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_button_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_textfield_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/supporting_message.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_message_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_message_styles.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 
-/// [MatchTextFieldWithButton] 컴포넌트
+/// [CustomTextFieldWithButton] 컴포넌트
 /// ### 텍스트 필드와 우측 버튼이 함께 있는 컴포넌트
 ///
 ///
@@ -43,7 +43,7 @@ import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 /// - [onClickSuffixIcon]: 오른쪽 아이콘 에셋 클릭 이벤트
 /// - [buttonText]: 우측 버튼 텍스트
 /// - [onButtonTap]: 우측 버튼 클릭 이벤트
-class MatchTextFieldWithButton extends StatefulWidget {
+class CustomTextFieldWithButton extends StatefulWidget {
   // TextField Options
   final TextEditingController controller;
   final String? hintText;
@@ -69,12 +69,12 @@ class MatchTextFieldWithButton extends StatefulWidget {
   final VoidCallback? onClickSuffixIcon;
   // Button Options
   final String buttonText;
-  final MatchTextFieldWithButtonStyles buttonStyle;
+  final CustomTextFieldWithButtonStyles buttonStyle;
   final FutureOr<void> Function()? onButtonTap;
   // Timer Options
   final bool isTimer;
 
-  const MatchTextFieldWithButton({
+  const CustomTextFieldWithButton({
     required this.controller,
     this.hintText,
     this.labelText,
@@ -105,10 +105,10 @@ class MatchTextFieldWithButton extends StatefulWidget {
   });
 
   @override
-  State<MatchTextFieldWithButton> createState() => MatchTextFieldWithButtonState();
+  State<CustomTextFieldWithButton> createState() => CustomTextFieldWithButtonState();
 }
 
-class MatchTextFieldWithButtonState extends State<MatchTextFieldWithButton> {
+class CustomTextFieldWithButtonState extends State<CustomTextFieldWithButton> {
   String? _errorText;
   bool _isFocused = false;
   late bool isObscure;
@@ -128,7 +128,7 @@ class MatchTextFieldWithButtonState extends State<MatchTextFieldWithButton> {
 
   // 부모 위젯에서 전달된 파라미터가 바뀌었을 때 호출
   @override
-  void didUpdateWidget(covariant MatchTextFieldWithButton oldWidget) {
+  void didUpdateWidget(covariant CustomTextFieldWithButton oldWidget) {
     super.didUpdateWidget(oldWidget);
 
     // initText가 바뀌었는지 체크하고 텍스트 업데이트
@@ -187,24 +187,24 @@ class MatchTextFieldWithButtonState extends State<MatchTextFieldWithButton> {
         // (하단) 상태 메시지
         const SizedBox(height: 4.0),
         if (_errorText != null)
-          SupportingMessage(text: _errorText!, messageStyles: MatchMessageStyles.ERROR)
+          SupportingMessage(text: _errorText!, messageStyles: CustomMessageStyles.ERROR)
         else if (widget.helperText != null)
-          SupportingMessage(text: widget.helperText!, messageStyles: MatchMessageStyles.HELPER),
+          SupportingMessage(text: widget.helperText!, messageStyles: CustomMessageStyles.HELPER),
       ],
     );
   }
 
   /// [우측 버튼 선택]
-  Widget _getButton(MatchTextFieldWithButtonStyles style) {
+  Widget _getButton(CustomTextFieldWithButtonStyles style) {
     switch (style) {
-      case MatchTextFieldWithButtonStyles.LARGE_PRIMARY:
+      case CustomTextFieldWithButtonStyles.LARGE_PRIMARY:
         return LargePrimaryButton(
           title: widget.buttonText,
           onTap: widget.onButtonTap,
           widthOption: ButtonWidthOption.CUSTOM,
           customWidth: 80,
         );
-      case MatchTextFieldWithButtonStyles.LARGE_SECONDARY:
+      case CustomTextFieldWithButtonStyles.LARGE_SECONDARY:
         return LargeSecondaryButton(
           title: widget.buttonText,
           onTap: widget.onButtonTap,

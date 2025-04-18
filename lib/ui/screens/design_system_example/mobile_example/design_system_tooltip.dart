@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/header_components/match_header.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/appbar_components/custom_appbar.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/divider/divider.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/tooltip/match_custom_tooltip.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/tooltip/custom_tooltip.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_tooltip_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_tooltip_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class DesignSystemTooltip extends StatelessWidget {
@@ -14,7 +14,7 @@ class DesignSystemTooltip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MatchAppbar(
+      appBar: CustomAppbar(
         title: "Tooltip",
         onRightIconPressed: () {},
         isBackground: true,
@@ -31,16 +31,16 @@ class DesignSystemTooltip extends StatelessWidget {
               ),
               topBorderDivider(),
               const SizedBox(height: 30),
-              MatchCustomTooltip(
+              CustomTooltip(
                 tooltipText: "툴팁 등장이요~",
-                matchTooltipStyles: MatchTooltipStyles.CENTER_BOTTOM,
+                customTooltipStyles: CustomTooltipStyles.CENTER_BOTTOM,
                 iconWidget: tooltipIcon(),
                 subWidget: tooltipSubWidget('1.커스텀 툴팁(Center Bottom)'),
               ),
               const SizedBox(height: 60),
-              MatchCustomTooltip(
+              CustomTooltip(
                 tooltipText: "툴팁 등장이요~",
-                matchTooltipStyles: MatchTooltipStyles.CENTER_TOP,
+                customTooltipStyles: CustomTooltipStyles.CENTER_TOP,
                 iconWidget: tooltipIcon(),
                 subWidget: tooltipSubWidget('2.커스텀 툴팁(Center Top)'),
               ),
@@ -51,11 +51,6 @@ class DesignSystemTooltip extends StatelessWidget {
               ),
               topBorderDivider(),
               const SizedBox(height: 30),
-              // MatchSuperToolt(
-              //   tooltipText: '툴팁 등장!!!!!!!!!',
-              //   iconWidget: tooltipIcon(),
-              //   subWidget: tooltipSubWidget('3.커스텀 수퍼 툴팁'),
-              // )
             ],
           ),
         ),

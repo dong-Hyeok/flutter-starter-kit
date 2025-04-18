@@ -14,7 +14,7 @@ import 'package:flutter_starter_kit/ui/screens/design_system_example/mobile_exam
 import 'package:flutter_starter_kit/ui/screens/design_system_example/mobile_example/design_system_tooltip.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_primary_button.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_button_styles.dart';
 import 'package:get/get.dart';
 
 

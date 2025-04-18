@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_primary_button.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_secondary_button.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_button_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 import 'package:get/get.dart';
 
-/// [MatchDefaltDialog]
+/// [CustomDefaultModal]
 ///
 /// - [title]: 모달 타이틀
 /// - [body]: 모달 바디(String)
@@ -15,15 +16,17 @@ import 'package:get/get.dart';
 /// - [onClickRight]: 오른쪽 버튼 클릭 콜백 메서드
 ///
 /// [왼쪽 버튼 타이틀이 없으면 사용하지 않는 것으로 취급]
-class MatchCustomModal extends StatelessWidget {
-  final Widget bodyWidget;
+class CustomDefaultModal extends StatelessWidget {
+  final String title;
+  final String? body;
   final String? leftButtonTitle;
   final String rightButtonTitle;
   final VoidCallback? onClickLeft;
   final VoidCallback? onClickRight;
 
-  const MatchCustomModal({
-    required this.bodyWidget,
+  const CustomDefaultModal({
+    required this.title,
+    this.body,
     this.leftButtonTitle,
     required this.rightButtonTitle,
     this.onClickLeft,
@@ -34,7 +37,8 @@ class MatchCustomModal extends StatelessWidget {
   /// [다이얼로그 호출 메서드임!!!!]
   /// - [isBarrierDismissible]: 다이얼로그 외부 클릭시 다이얼로그 close 여부
   static void show({
-    required Widget bodyWidget,
+    required String title,
+    String? body,
     String? leftButtonTitle,
     required String rightButtonTitle,
     VoidCallback? onClickLeft,
@@ -42,8 +46,9 @@ class MatchCustomModal extends StatelessWidget {
     bool isBarrierDismissible = false,
   }) {
     Get.dialog(
-      MatchCustomModal(
-        bodyWidget: bodyWidget,
+      CustomDefaultModal(
+        title: title,
+        body: body,
         leftButtonTitle: leftButtonTitle,
         rightButtonTitle: rightButtonTitle,
         onClickLeft: onClickLeft ?? () => Get.back(),
@@ -70,13 +75,33 @@ class MatchCustomModal extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Padding(padding: const EdgeInsets.only(left: 8.0, right: 8.0), child: bodyWidget),
+              Text(
+                title,
+                style: TextStyles.Title.copyWith(color: AppColors.textColors.textStrong),
+              ),
+              _bodyWidget(),
+              const SizedBox(height: 32),
               _actionWidget(),
             ],
           ),
         ),
       ),
     );
+  }
+
+  // Body
+  Widget _bodyWidget() {
+    return body == null
+        ? const SizedBox.shrink()
+        : Padding(
+          padding: const EdgeInsets.only(top: 8.0),
+          child: Text(
+            body!,
+            style: TextStyles.Body1_Regular.copyWith(
+              color: AppColors.textColors.textDefault,
+            ),
+          ),
+        );
   }
 
   // 하단 버튼

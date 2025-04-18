@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_control_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_control_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';

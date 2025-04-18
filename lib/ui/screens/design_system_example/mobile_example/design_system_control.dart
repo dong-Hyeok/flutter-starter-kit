@@ -4,7 +4,7 @@ import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/control_component
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/control_components/radio_button_list.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/control/custom_check_box.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/control/custom_radio.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_control_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_control_styles.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 
 

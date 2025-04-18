@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/text_field_components/match_text_area.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/text_field_components/match_text_field.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/text_field_components/custom_text_area.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/text_field_components/custom_text_field.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_primary_button.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/toast_message.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_button_styles.dart';
 
 class DesignSystemTextField extends StatefulWidget {
   const DesignSystemTextField({super.key});
@@ -19,16 +19,14 @@ class _DesignSystemTextFieldState extends State<DesignSystemTextField> {
 
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
-  /// [MatchTextField] 사용시 필요한 객체들
+  /// [CustomTextField] 사용시 필요한 객체들
   /// FieldKey는 사용하고자 하는 TextField 타입을 지정해야 한다!
   final TextEditingController text1Controller = TextEditingController();
-  final GlobalKey<MatchTextFieldState> text1FieldKey =
-      GlobalKey<MatchTextFieldState>();
+  final GlobalKey<CustomTextFieldState> text1FieldKey = GlobalKey<CustomTextFieldState>();
   final FocusNode _field1Focus = FocusNode();
 
   final TextEditingController text2Controller = TextEditingController();
-  final GlobalKey<MatchTextFieldState> text2FieldKey =
-      GlobalKey<MatchTextFieldState>();
+  final GlobalKey<CustomTextFieldState> text2FieldKey = GlobalKey<CustomTextFieldState>();
   final FocusNode _field2Focus = FocusNode();
 
   final TextEditingController text3Controller = TextEditingController();
@@ -38,13 +36,11 @@ class _DesignSystemTextFieldState extends State<DesignSystemTextField> {
   final FocusNode _field4Focus = FocusNode();
 
   final TextEditingController text5Controller = TextEditingController();
-  final GlobalKey<MatchTextFieldState> text5FieldKey =
-      GlobalKey<MatchTextFieldState>();
+  final GlobalKey<CustomTextFieldState> text5FieldKey = GlobalKey<CustomTextFieldState>();
   final FocusNode _field5Focus = FocusNode();
 
   final TextEditingController text6Controller = TextEditingController();
-  final GlobalKey<MatchTextAreaState> text6FieldKey =
-      GlobalKey<MatchTextAreaState>();
+  final GlobalKey<CustomTextAreaState> text6FieldKey = GlobalKey<CustomTextAreaState>();
   final FocusNode _field6Focus = FocusNode();
 
   @override
@@ -71,25 +67,25 @@ class _DesignSystemTextFieldState extends State<DesignSystemTextField> {
             // key: formKey,
             child: Column(
               children: [
-                MatchTextField(
+                CustomTextField(
                   controller: text1Controller,
                   labelText: '1. 기본이얌',
                   hintText: '플레이스 홀더얌',
                   helperText: '헬퍼 텍스트얌!',
                   errorTextValidator: validateErrorText,
                   key:
-                      text1FieldKey, // GlobalKey 전달(이걸 전달해야 MatchTextField의 validate를 호출할 수 있다.)
+                      text1FieldKey, // GlobalKey 전달(이걸 전달해야 CustomTextField의 validate를 호출할 수 있다.)
                   focusNode:
                       _field1Focus, // 포커스 전달(포커스를 전달해야 x 버튼이 포커스가 있을때 상태를 감지할 수 있다.)
                   toFocusNode: _field2Focus,
                 ),
                 const SizedBox(height: 60),
-                MatchTextField(
+                CustomTextField(
                   controller: text2Controller,
                   labelText: '2.좌우 아이콘 추가된거얌',
                   hintText: '플레이스 홀더얌',
                   key:
-                      text2FieldKey, // GlobalKey 전달(이걸 전달해야 MatchTextField의 validate를 호출할 수 있다.)
+                      text2FieldKey, // GlobalKey 전달(이걸 전달해야 CustomTextField의 validate를 호출할 수 있다.)
                   focusNode:
                       _field2Focus, // 포커스 전달(포커스를 전달해야 x 버튼이 포커스가 있을때 상태를 감지할 수 있다.)
                   toFocusNode: _field3Focus,
@@ -104,7 +100,7 @@ class _DesignSystemTextFieldState extends State<DesignSystemTextField> {
                   },
                 ),
                 const SizedBox(height: 60),
-                MatchTextField(
+                CustomTextField(
                   controller: text3Controller,
                   labelText: '비활성화',
                   hintText: '비활성화 된 상태',
@@ -113,7 +109,7 @@ class _DesignSystemTextFieldState extends State<DesignSystemTextField> {
                   toFocusNode: _field4Focus,
                 ),
                 const SizedBox(height: 60),
-                MatchTextField(
+                CustomTextField(
                   controller: text4Controller,
                   labelText: '읽기 전용',
                   hintText: '읽기 전용이얍',
@@ -125,26 +121,26 @@ class _DesignSystemTextFieldState extends State<DesignSystemTextField> {
                   },
                 ),
                 const SizedBox(height: 60),
-                MatchTextField(
+                CustomTextField(
                   controller: text5Controller,
                   labelText: '비밀번호 입력 예시',
                   hintText: '플레이스홀더얌',
                   key:
-                      text5FieldKey, // GlobalKey 전달(이걸 전달해야 MatchTextField의 validate를 호출할 수 있다.)
+                      text5FieldKey, // GlobalKey 전달(이걸 전달해야 CustomTextField의 validate를 호출할 수 있다.)
                   focusNode:
                       _field5Focus, // 포커스 전달(포커스를 전달해야 x 버튼이 포커스가 있을때 상태를 감지할 수 있다.)
                   toFocusNode: _field6Focus,
                   isObscureText: true,
                 ),
                 const SizedBox(height: 40),
-                MatchTextArea(
+                CustomTextArea(
                   controller: text6Controller,
                   errorTextValidator: validateErrorText,
                   labelText: 'Text Area',
                   hintText: '플레이스홀더얌',
                   helperText: '헬퍼 텍스트얌!',
                   key:
-                      text6FieldKey, // GlobalKey 전달(이걸 전달해야 MatchTextField의 validate를 호출할 수 있다.)
+                      text6FieldKey, // GlobalKey 전달(이걸 전달해야 CustomTextField의 validate를 호출할 수 있다.)
                   focusNode:
                       _field6Focus, // 포커스 전달(포커스를 전달해야 x 버튼이 포커스가 있을때 상태를 감지할 수 있다.)
                   maxLength: 100,

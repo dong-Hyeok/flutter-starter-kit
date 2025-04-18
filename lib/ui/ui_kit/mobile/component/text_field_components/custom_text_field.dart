@@ -4,10 +4,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/message/supporting_message.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_message_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_message_styles.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 
-/// [MatchTextField] 위젯
+/// [CustomTextField] 위젯
 /// ### validator 와 formFieldKey 사용하지 않는 이유
 /// - 아이콘이 포함된 오류, 헬퍼 텍스트를 표시해야 한다.
 ///   그러나 validator는 오직 오류 텍스트만 감지하기 때문에 헬퍼 텍스트는 활용할 수 없다.
@@ -38,7 +38,7 @@ import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 /// - [onClickPreffixIcon]: 왼쪽 아이콘 에셋 클릭 이벤트
 /// - [suffixIconAsset]: 오른쪽 아이콘 에셋
 /// - [onClickSuffixIcon]: 오른쪽 아이콘 에셋 클릭 이벤트
-class MatchTextField extends StatefulWidget {
+class CustomTextField extends StatefulWidget {
   final TextEditingController controller;
   final String? hintText;
   final String? labelText;
@@ -62,7 +62,7 @@ class MatchTextField extends StatefulWidget {
   final String? suffixIconAsset;
   final VoidCallback? onClickSuffixIcon;
 
-  const MatchTextField({
+  const CustomTextField({
     required this.controller,
     this.hintText,
     this.labelText,
@@ -89,10 +89,10 @@ class MatchTextField extends StatefulWidget {
   });
 
   @override
-  State<MatchTextField> createState() => MatchTextFieldState();
+  State<CustomTextField> createState() => CustomTextFieldState();
 }
 
-class MatchTextFieldState extends State<MatchTextField> {
+class CustomTextFieldState extends State<CustomTextField> {
   String? _errorText;
   bool _isFocused = false;
   late bool isObscure;
@@ -112,7 +112,7 @@ class MatchTextFieldState extends State<MatchTextField> {
 
   // 부모 위젯에서 전달된 파라미터가 바뀌었을 때 호출
   @override
-  void didUpdateWidget(covariant MatchTextField oldWidget) {
+  void didUpdateWidget(covariant CustomTextField oldWidget) {
     super.didUpdateWidget(oldWidget);
 
     // initText가 바뀌었는지 체크하고 텍스트 업데이트
@@ -164,9 +164,9 @@ class MatchTextFieldState extends State<MatchTextField> {
         // (하단) 상태 메시지
         const SizedBox(height: 4.0),
         if (_errorText != null)
-          SupportingMessage(text: _errorText!, messageStyles: MatchMessageStyles.ERROR)
+          SupportingMessage(text: _errorText!, messageStyles: CustomMessageStyles.ERROR)
         else if (widget.helperText != null)
-          SupportingMessage(text: widget.helperText!, messageStyles: MatchMessageStyles.HELPER),
+          SupportingMessage(text: widget.helperText!, messageStyles: CustomMessageStyles.HELPER),
       ],
     );
   }

@@ -4,12 +4,12 @@ import 'package:flutter_starter_kit/core/asset_path/icon_path.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/color/app_colors.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_primary_button.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/mobile/widget/button/large_secondary_button.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/style/match_button_styles.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/style/custom_button_styles.dart';
 import 'package:flutter_starter_kit/ui/ui_kit/style/text_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
-/// [MatchBottomSheet]
+/// [CustomBottomSheet]
 ///
 /// ### 파라미터
 /// -[title]: 바텀시트 상단 타이틀
@@ -21,7 +21,7 @@ import 'package:get/get.dart';
 /// -[onClickTitleIcon]: 바텀시트 타이틀 우측 아이콘 클릭 이벤트 콜백
 /// -[isHorizontalPadding]: 바텀시트 좌우 패딩 값 on/off
 /// -[isBarrierDismissible]: 외부 클릭시 바텀시트 종료 옵션(Default: true(외부 클릭시 바텀시트 사라짐))
-class MatchBottomSheet extends StatelessWidget {
+class CustomBottomSheet extends StatelessWidget {
   final String? title;
   final Widget bodyWidget;
   final String? leftButtonTitle;
@@ -31,7 +31,7 @@ class MatchBottomSheet extends StatelessWidget {
   final VoidCallback? onClickTitleIcon;
   final bool isHorizontalPadding;
 
-  const MatchBottomSheet({
+  const CustomBottomSheet({
     this.title,
     required this.bodyWidget,
     this.leftButtonTitle,
@@ -55,7 +55,7 @@ class MatchBottomSheet extends StatelessWidget {
     bool isBarrierDismissible = true,
   }) {
     Get.bottomSheet(
-      MatchBottomSheet(
+      CustomBottomSheet(
         title: title,
         bodyWidget: bodyWidget,
         leftButtonTitle: leftButtonTitle,

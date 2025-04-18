@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/header_components/match_header.dart';
+import 'package:flutter_starter_kit/ui/ui_kit/mobile/component/appbar_components/custom_appbar.dart';
 
 class DesignSystemHeader extends StatelessWidget {
   const DesignSystemHeader({super.key});
@@ -7,7 +7,7 @@ class DesignSystemHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MatchAppbar(
+      appBar: CustomAppbar(
         title: "설정",
         onRightIconPressed: () {},
         isBackground: true,
